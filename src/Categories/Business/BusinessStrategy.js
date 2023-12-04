@@ -1,11 +1,12 @@
 import axios from "axios"
 import { useEffect } from "react"
 import { useState } from "react"
+import Footer from "../../Footer/Footer"
 
 const BusinessStrategy = () => {
   const[data,setData]=useState([])
   useEffect(()=>{
-      axios.get("http://localhost:4005/api")
+      axios.get("https://udemi-pbit.onrender.com/api/searchData")
       .then((response)=>
         setData(response.data)
       )
@@ -14,7 +15,7 @@ const BusinessStrategy = () => {
 return (
   <>
   <div className="first-container">
-   <h1>Business Courses</h1>
+   <h1>Business Strategy Courses</h1>
   <h2>Courses to get you started</h2>
   <div className="Mostpoplar">
   <span>Most popular</span>
@@ -24,7 +25,7 @@ return (
   </div>
   <div className="compo-parent">
 
-{data.filter((item)=>item.category==="Business").map((item,index)=>{
+{data.filter((item)=>item.category==="BusinesStrategy").map((item,index)=>{
 console.log(item)
 return(
  <div>
@@ -63,24 +64,27 @@ return(
 
   <div className="popular-topics">
     <h2 className="popular-top">Popular topics</h2>
-  <div>
-    <table className="table1">
-      <tr className="tr">
-        <td> PMI Project Management professional (PMP)</td>
-        <td>Project Management</td>
-        <td>Data Modeling</td>
-        <td>Business Analysis</td>
-        <td>Real Estate Investing</td>
-      </tr>
-      <tr className="tr">
-        <td>PMI PMBOK</td>
-        <td>Data Analysis</td>
-        <td>PMI Certified Associate in Project Management (CAPM)</td>
-        <td>Tableau</td>
-        <td>Communication Skills</td>
-      </tr>
-    </table>
-  </div>
+    <div>
+      <div className="table1">
+        <div className="tr">
+          <div className="td"> Business Strategy</div>
+          <div className="td">Management Consulting</div>
+          <div className="td">Digital Transformation</div>
+          <div className="td">Artificial Intelligence</div>
+         
+        </div>
+        </div>
+        <div className="table1">
+        <div className="tr">
+          <div className="td">Design Thinking</div>
+          <div className="td">IT Fundamentals</div>
+          <div className="td">Business Model</div>
+          <div className="td">ChatGPT</div>
+        
+        </div>
+        </div>
+      
+    </div>
   </div>
  <Business2/>
   </>
@@ -94,7 +98,7 @@ export default BusinessStrategy
 function Business2(){
 const[data,setData]=useState([])
 useEffect(()=>{
-    axios.get("http://localhost:4005/api")
+    axios.get("https://udemi-pbit.onrender.com/api/searchData")
     .then((response)=>
       setData(response.data)
     )
@@ -105,7 +109,7 @@ useEffect(()=>{
       <h1 className="popular-inst">Popular Instructors</h1>
     <div className="popular-instructor">
     
-    {data.filter((item)=>item.category==="Business2").map((item,index)=>{
+    {data.filter((item)=>item.category==="BusinesStrategy2").map((item,index)=>{
 console.log(item)
 return(
  <div>
@@ -167,7 +171,7 @@ Not sure? All courses have a 30-day money-back guarantee</div>
 function Business6(){
 const[data,setData]=useState([])
 useEffect(()=>{
-    axios.get("http://localhost:4005/api")
+    axios.get("https://udemi-pbit.onrender.com/api/searchData")
     .then((response)=>
       setData(response.data)
     )
@@ -199,11 +203,33 @@ return(
           <img src="https://upload.wikimedia.org/wikipedia/commons/e/eb/Star_rating_3.5_of_5.png" height="20px" width="100px" alt="not found"/> 
             <p className="rating-no">3.0 & up(10,000)</p>
             </div>
-           
+            <div className="subcategory">
+              <div className="sub-topics">
+              <h2>Topics</h2>
+            </div>
+            <div className="sub-topics">
+              <h2>Subcategory</h2>
+            </div>
+            <div className="sub-topics">
+              <h2>Level</h2>
+            </div>
+            <div className="sub-topics">
+              <h2>Languages</h2>
+            </div>
+            <div className="sub-topics">
+              <h2>Price</h2>
+            </div>
+            <div className="sub-topics">
+              <h2>Features</h2>
+            </div>
+            <div className="sub-topics">
+              <h2>Subtitles</h2>
+            </div>
+            </div>
           </div>
         
           <div className="sub-parentcompo">
-{data.filter((item)=>item.category==="Business3").map((item,index)=>{
+{data.filter((item)=>item.category==="BusinesStrategy3").map((item,index)=>{
 console.log(item)
 return(
  
@@ -216,7 +242,7 @@ return(
     </div>
     <div className="right-business1">
     <div className="course-heading">{item.heading.slice(0,55)}..</div>
-    <div className="course-title">{item.title.slice(0,30)}..</div>
+    
     <div className="course-writer">{item.writer}</div>
     <div className="course-rate">{item.rate}</div>
     <div><button className="bestseller">BestSeller</button></div>
@@ -231,7 +257,7 @@ return(
   </div>
   </div>
 </div>
-
+<Footer/>
 </>
 )
 }

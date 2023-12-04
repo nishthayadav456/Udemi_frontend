@@ -1,6 +1,8 @@
 import axios from "axios"
 import { useEffect } from "react"
 import { useState } from "react"
+import { NavLink } from "react-router-dom"
+import Footer from "../Footer/Footer"
 
 
 const Home = () => {
@@ -251,53 +253,80 @@ function Middle6(){
      
         <div className="container6">
        
-        <table className="table">
-            <tr>
-                <th>Development</th>
-                <th>Business</th>
-                <th>IT and Software</th>
-                <th>Design</th>
-                 </tr>
-                 <tr>
-                 <td>Python</td>
-                <td>Financial Analysis</td>
-                <td>Amazon AWS</td>
-                <td>Photoshop</td>
-                   
-                    
-                   
-                 </tr>
-                 <tr>
-                    <td>36,354,994 learners</td>
-                    <td>1,195,282 learners</td>
-                    <td>6,123,456 learners</td>
-                    <td>10,909,736 learners</td>
-                  </tr>
-                 <tr>
-                    <td>Web Development</td>
-                    <td>SQL</td>
-                    <td>Ethical Tracking</td>
-                    <td>Graphic Design</td>
-                 </tr>
-                 <tr>
-                    <td>11,415,615 learners</td>
-                    <td>5,977,561 learners</td>
-                    <td>10,931,066 learners</td>
-                    <td>3,381,052 learners</td>
-                  </tr>
-                 <tr>
-                    <td>Machine Learning</td>
-                    <td>PMP</td>
-                    <td>Cyber Security</td>
-                    <td>Drawing</td>
-                 </tr>
-                 <tr>
-                    <td>7,070,015 learners</td>
-                    <td>1,733,398 learners</td>
-                    <td>3,998,037 learners</td>
-                    <td>2,410,849 learners</td>
-                 </tr>
-        </table>
+        <div className="table">
+            <div className="tr1">
+                <div className="td1">Development</div>
+                <div className="td1">Business</div>
+                <div className="td1">IT and Software</div>
+                <div className="td1">Design</div>
+                 </div>
+                 </div>
+                 <div className="table">
+                 <div className="tr1">
+                 <div className="td1">
+                  <NavLink>Python </NavLink>
+                  <p className="learners">36,354,994 learners</p>
+                 </div>
+                <div className="td1">
+                <NavLink>Financial Analysis</NavLink>
+                <p className="learners">1,195,282 learners</p>
+                </div>
+                
+                <div className="td1">
+                <NavLink>Amazon AWS</NavLink>
+               <p className="learners">6,123,456 learners</p>
+                </div>
+                <div className="td1">
+                  <NavLink>Photoshop</NavLink>
+                <p className="learners">10,909,736 learners</p>
+                </div>
+              
+                    </div>
+                </div>
+               
+               <div className="table">
+                 <div className="tr1">
+                    <div className="td1">
+                    <NavLink>Web Development</NavLink>
+                    <p className="learners">11,415,615 learners</p>
+                    </div>
+                    <div className="td1">
+                     <NavLink>SQL</NavLink>
+                      <p className="learners">5,977,561 learners</p>
+                     </div>
+                    <div className="td1">
+                    <NavLink>Ethical Tracking</NavLink>
+                     <p className="learners">10,931,066 learners</p>
+                    </div>
+                    <div className="td1">
+                    <NavLink>Graphic Design</NavLink>
+                    <p className="learners">3,381,052 learners</p>
+                    </div>
+                 </div>
+                
+                  </div>
+
+                <div className="table">
+                 <div className="tr1">
+                    <div className="td1">
+                    <NavLink>Machine Learning</NavLink>
+                  <p className="learners">7,070,015 learners</p>
+                    </div>
+                    <div className="td1">
+                    <NavLink>PMP</NavLink>
+                   <p className="learners">1,733,398 learners</p>
+                    </div>
+                    <div className="td1">
+                    <NavLink>Cyber Security</NavLink>
+                   <p className="learners">3,998,037 learners</p>
+                    </div>
+                    <div className="td1">
+                   <NavLink> Drawing</NavLink>
+                  <p className="learners">2,410,849 learners</p>
+                    </div>
+                 </div>
+                </div>
+       
         </div>
         <div className="explore-more"><button className="btn2">Explore more topics</button></div>
         </div>
@@ -369,7 +398,7 @@ return(
 <button className="btn5">Start teaching today</button>
         </div>
      </div>
-
+<Footer/>
     </>
 )
 }

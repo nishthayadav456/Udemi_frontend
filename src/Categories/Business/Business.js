@@ -1,12 +1,13 @@
 import axios from "axios"
 import { useEffect } from "react"
 import { useState } from "react"
+import Footer from "../../Footer/Footer"
 
 
 const Business = () => {
   const[data,setData]=useState([])
     useEffect(()=>{
-        axios.get("http://localhost:4005/api")
+        axios.get("https://udemi-pbit.onrender.com/api/searchData")
         .then((response)=>
           setData(response.data)
         )
@@ -65,22 +66,25 @@ return(
     <div className="popular-topics">
       <h2 className="popular-top">Popular topics</h2>
     <div>
-      <table className="table1">
-        <tr className="tr">
-          <td> PMI Project Management professional (PMP)</td>
-          <td>Project Management</td>
-          <td>Data Modeling</td>
-          <td>Business Analysis</td>
-          <td>Real Estate Investing</td>
-        </tr>
-        <tr className="tr">
-          <td>PMI PMBOK</td>
-          <td>Data Analysis</td>
-          <td>PMI Certified Associate in Project Management (CAPM)</td>
-          <td>Tableau</td>
-          <td>Communication Skills</td>
-        </tr>
-      </table>
+      <div className="table1">
+        <div className="tr">
+          <div className="td"> PMI Project Management professional (PMP)</div>
+          <div className="td">Project Management</div>
+          <div className="td">Data Modeling</div>
+          <div className="td">Business Analysis</div>
+         
+        </div>
+        </div>
+        <div className="table1">
+        <div className="tr">
+          <div className="td">PMI PMBOK</div>
+          <div className="td">Data Analysis</div>
+          <div className="td">PMI Certified Associate in Project Management</div>
+          <div className="td">Tableau</div>
+        
+        </div>
+        </div>
+      
     </div>
     </div>
    <Business2/>
@@ -95,7 +99,7 @@ export default Business
 function Business2(){
   const[data,setData]=useState([])
   useEffect(()=>{
-      axios.get("http://localhost:4005/api")
+      axios.get("https://udemi-pbit.onrender.com/api/searchData")
       .then((response)=>
         setData(response.data)
       )
@@ -168,7 +172,7 @@ Not sure? All courses have a 30-day money-back guarantee</div>
 function Business6(){
   const[data,setData]=useState([])
   useEffect(()=>{
-      axios.get("http://localhost:4005/api")
+      axios.get("https://udemi-pbit.onrender.com/api/searchData")
       .then((response)=>
         setData(response.data)
       )
@@ -200,7 +204,29 @@ return(
             <img src="https://upload.wikimedia.org/wikipedia/commons/e/eb/Star_rating_3.5_of_5.png" height="20px" width="100px" alt="not found"/> 
               <p className="rating-no">3.0 & up(10,000)</p>
               </div>
-             
+              <div className="subcategory">
+              <div className="sub-topics">
+              <h2>Topics</h2>
+            </div>
+            <div className="sub-topics">
+              <h2>Subcategory</h2>
+            </div>
+            <div className="sub-topics">
+              <h2>Level</h2>
+            </div>
+            <div className="sub-topics">
+              <h2>Languages</h2>
+            </div>
+            <div className="sub-topics">
+              <h2>Price</h2>
+            </div>
+            <div className="sub-topics">
+              <h2>Features</h2>
+            </div>
+            <div className="sub-topics">
+              <h2>Subtitles</h2>
+            </div>
+            </div>
             </div>
           
             <div className="sub-parentcompo">
@@ -232,7 +258,7 @@ return(
     </div>
     </div>
   </div>
-
+  <Footer/>
   </>
 )
 }

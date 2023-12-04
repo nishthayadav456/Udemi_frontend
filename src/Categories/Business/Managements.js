@@ -1,11 +1,12 @@
 import axios from "axios"
 import { useEffect } from "react"
 import { useState } from "react"
+import Footer from "../../Footer/Footer"
 
 const Managements = () => {
   const[data,setData]=useState([])
   useEffect(()=>{
-      axios.get("http://localhost:4005/api")
+      axios.get("https://udemi-pbit.onrender.com/api/searchData")
       .then((response)=>
         setData(response.data)
       )
@@ -14,7 +15,7 @@ const Managements = () => {
 return (
   <>
   <div className="first-container">
-   <h1>Communication Courses</h1>
+   <h1>Management Courses</h1>
   <h2>Courses to get you started</h2>
   <div className="Mostpoplar">
   <span>Most popular</span>
@@ -63,24 +64,27 @@ return(
 
   <div className="popular-topics">
     <h2 className="popular-top">Popular topics</h2>
-  <div>
-    <table className="table1">
-      <tr className="tr">
-        <td>Product Management</td>
-        <td>Management Skills</td>
-        <td>Project Management</td>
-        <td>Quality Management</td>
-        <td>Risk Management</td>
-      </tr>
-      <tr className="tr">
-        <td>Leadership</td>
-        <td>Business Strategy</td>
-        <td>Manager Training</td>
-        <td>Project Management professional</td>
-        <td>PMI PMBOK</td>
-      </tr>
-    </table>
-  </div>
+    <div>
+      <div className="table1">
+        <div className="tr">
+          <div className="td"> Product Management </div>
+          <div className="td"> Management Skills</div>
+          <div className="td">Data Modeling</div>
+          <div className="td">Business Strategy</div>
+         
+        </div>
+        </div>
+        <div className="table1">
+        <div className="tr">
+          <div className="td">Leadership</div>
+          <div className="td">Manager Training</div>
+          <div className="td">PMI Certified Associate in Project Management</div>
+          <div className="td">Quality Management</div>
+        
+        </div>
+        </div>
+      
+    </div>
   </div>
  <Business2/>
   </>
@@ -94,7 +98,7 @@ export default Managements
 function Business2(){
 const[data,setData]=useState([])
 useEffect(()=>{
-    axios.get("http://localhost:4005/api")
+    axios.get("https://udemi-pbit.onrender.com/api/searchData")
     .then((response)=>
       setData(response.data)
     )
@@ -164,7 +168,7 @@ Not sure? All courses have a 30-day money-back guarantee</div>
 function Business6(){
 const[data,setData]=useState([])
 useEffect(()=>{
-    axios.get("http://localhost:4005/api")
+    axios.get("https://udemi-pbit.onrender.com/api/searchData")
     .then((response)=>
       setData(response.data)
     )
@@ -197,28 +201,28 @@ return(
             <p className="rating-no">3.0 & up(10,000)</p>
             </div>
             <div className="subcategory">
-            <div>
-            <h2>Topics</h2>
-          </div>
-          <div>
-            <h2>Subcategory</h2>
-          </div>
-          <div>
-            <h2>Level</h2>
-          </div>
-          <div>
-            <h2>Languages</h2>
-          </div>
-          <div>
-            <h2>Price</h2>
-          </div>
-          <div>
-            <h2>Features</h2>
-          </div>
-          <div>
-            <h2>Subtitles</h2>
-          </div>
-          </div>
+              <div className="sub-topics">
+              <h2>Topics</h2>
+            </div>
+            <div className="sub-topics">
+              <h2>Subcategory</h2>
+            </div>
+            <div className="sub-topics">
+              <h2>Level</h2>
+            </div>
+            <div className="sub-topics">
+              <h2>Languages</h2>
+            </div>
+            <div className="sub-topics">
+              <h2>Price</h2>
+            </div>
+            <div className="sub-topics">
+              <h2>Features</h2>
+            </div>
+            <div className="sub-topics">
+              <h2>Subtitles</h2>
+            </div>
+            </div>
           </div>
         
           <div className="sub-parentcompo">
@@ -250,7 +254,7 @@ return(
   </div>
   </div>
 </div>
-
+<Footer/>
 </>
 )
 }

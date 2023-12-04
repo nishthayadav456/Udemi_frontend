@@ -1,12 +1,13 @@
 import axios from "axios"
 import { useEffect } from "react"
 import { useState } from "react"
+import Footer from "../../Footer/Footer"
 
 
 const Operations= () => {
   const[data,setData]=useState([])
     useEffect(()=>{
-        axios.get("http://localhost:4005/api")
+        axios.get("https://udemi-pbit.onrender.com/api/searchData")
         .then((response)=>
           setData(response.data)
         )
@@ -64,23 +65,26 @@ return(
 
     <div className="popular-topics">
       <h2 className="popular-top">Popular topics</h2>
-    <div>
-      <table className="table1">
-        <tr className="tr">
-          <td>Supply Chain</td>
-          <td>Logistics Management</td>
-          <td>Lean</td>
-          <td>Virtual Assistant skills</td>
-          <td>Six Sigma</td>
-        </tr>
-        <tr className="tr">
-          <td>Quality Management</td>
-          <td>Operation Management</td>
-          <td>Certified Quality Auditor</td>
-          <td>RPA Robotic process</td>
-          <td>Internal Auditing</td>
-        </tr>
-      </table>
+      <div>
+      <div className="table1">
+        <div className="tr">
+          <div className="td"> Supply Chain</div>
+          <div className="td">Logistics Management</div>
+          <div className="td">Lean</div>
+          <div className="td">Quality Management</div>
+         
+        </div>
+        </div>
+        <div className="table1">
+        <div className="tr">
+          <div className="td">Operation Management</div>
+          <div className="td">Virtual Assistant Skills</div>
+          <div className="td">Warehouse Management</div>
+          <div className="td">Six Sigma</div>
+        
+        </div>
+        </div>
+      
     </div>
     </div>
    <Business2/>
@@ -95,7 +99,7 @@ export default Operations
 function Business2(){
   const[data,setData]=useState([])
   useEffect(()=>{
-      axios.get("http://localhost:4005/api")
+      axios.get("https://udemi-pbit.onrender.com/api/searchData")
       .then((response)=>
         setData(response.data)
       )
@@ -165,7 +169,7 @@ Not sure? All courses have a 30-day money-back guarantee</div>
 function Business6(){
   const[data,setData]=useState([])
   useEffect(()=>{
-      axios.get("http://localhost:4005/api")
+      axios.get("https://udemi-pbit.onrender.com/api/searchData")
       .then((response)=>
         setData(response.data)
       )
@@ -197,29 +201,29 @@ return(
             <img src="https://upload.wikimedia.org/wikipedia/commons/e/eb/Star_rating_3.5_of_5.png" height="20px" width="100px" alt="not found"/> 
               <p className="rating-no">3.0 & up(10,000)</p>
               </div>
-              {/* <div className="subcategory">
-              <div>
+              <div className="subcategory">
+              <div className="sub-topics">
               <h2>Topics</h2>
             </div>
-            <div>
+            <div className="sub-topics">
               <h2>Subcategory</h2>
             </div>
-            <div>
+            <div className="sub-topics">
               <h2>Level</h2>
             </div>
-            <div>
+            <div className="sub-topics">
               <h2>Languages</h2>
             </div>
-            <div>
+            <div className="sub-topics">
               <h2>Price</h2>
             </div>
-            <div>
+            <div className="sub-topics">
               <h2>Features</h2>
             </div>
-            <div>
+            <div className="sub-topics">
               <h2>Subtitles</h2>
             </div>
-            </div> */}
+            </div>
             </div>
           
             <div className="sub-parentcompo">
@@ -251,7 +255,7 @@ return(
     </div>
     </div>
   </div>
-
+  <Footer/>
   </>
 )
 }

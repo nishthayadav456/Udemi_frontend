@@ -7,7 +7,7 @@ import Managements from '../Categories/Business/Managements'
 import BusinessStrategy from '../Categories/Business/BusinessStrategy'
 import HumanResources from '../Categories/Business/HumanResources'
 import FinanceAccounting from '../Categories/Finance&Accounting/FinanceAccounting'
-import Operations from '../Categories/Business/operations'
+import Operations from '../Categories/Business/Operations'
 import AccountingBookeeping from '../Categories/Finance&Accounting/AccountingBookeeping'
 import Compliance from '../Categories/Finance&Accounting/Compliance'
 import Economic from '../Categories/Finance&Accounting/Economic'
@@ -69,7 +69,7 @@ const Nav = () => {
         <Route path="/business" element={<Business/>}/>
         <Route path="/communication" element={<Communication/>}/>
         <Route path="/management" element={<Managements/>}/>
-        <Route path="businessstrategy/" element={<BusinessStrategy/>}/>
+        <Route path="/businessstrategy" element={<BusinessStrategy/>}/>
         <Route path="/operation" element={<Operations/>}/>
         <Route path="/hr" element={<HumanResources/>}/>
 
