@@ -8,9 +8,10 @@ import Footer from "../Footer/Footer"
 const Home = () => {
     const[data,setData]=useState([])
     useEffect(()=>{
-        axios.get("http://localhost:4005/api")
+        axios.get("http://localhost:4005/api/searchData")
         .then((response)=>
-          setData(response.data)
+        setData(response.data)
+
         )
         .catch((error)=>console.log(error))
       },[])
@@ -19,25 +20,23 @@ const Home = () => {
         <div className='image-container'>
       <img className="firstimg" src="https://img-c.udemycdn.com/notices/home_carousel_slide/image_responsive/721b2fbd-ad67-429b-8a19-e2a6d6959521.jpeg" alt="not found"/>
       </div>
-      <div className="middle-text">
-       
-      </div>
-      {/* <div className="top-heading">Trusted by over 15,000 companies and millions of learners around the world</div> */}
       <div className='Middle-container'>
-      
+      <div className="top-heading">Trusted by over 15,000 companies and millions of learners around the world</div>
+      <div className="middle-text" >
     {data.filter((item)=>item.category==="home").map((item,index)=>{
      console.log(item)
      return(
-     <div>
-        <div key={index}>
-         <div className="Middle1">
-         
-      <img className="logos" src={item.image} alt="not found"/>
+     
+        <div  className="Middle1" key={index}>
+         <div>
+         <img className="logos" src={item.image} alt="not found"/>
             </div>
             </div>
-        </div>
+        
 )
+
      })}
+</div>
       </div>
       <Middle/>
     </div>
@@ -49,7 +48,7 @@ export default Home
 function Middle(){
     const[data,setData]=useState([])
     useEffect(()=>{
-        axios.get("http://localhost:4005/api")
+        axios.get("http://localhost:4005/api/searchData")
         .then((response)=>
           setData(response.data)
         )
@@ -172,7 +171,7 @@ function Middle2(){
 function Middle3(){
     const[data,setData]=useState([])
     useEffect(()=>{
-        axios.get("http://localhost:4005/api")
+        axios.get("http://localhost:4005/api/searchData")
         .then((response)=>
           setData(response.data)
         )
@@ -211,7 +210,7 @@ return(
 function Middle5(){
     const[data,setData]=useState([])
     useEffect(()=>{
-        axios.get("http://localhost:4005/api")
+        axios.get("http://localhost:4005/api/searchData")
         .then((response)=>
           setData(response.data)
         )

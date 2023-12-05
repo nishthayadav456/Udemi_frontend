@@ -6,7 +6,7 @@ import Footer from "../../Footer/Footer"
 const Managements = () => {
   const[data,setData]=useState([])
   useEffect(()=>{
-      axios.get("https://udemi-pbit.onrender.com/api/searchData")
+      axios.get("http://localhost:4005/api/searchData")
       .then((response)=>
         setData(response.data)
       )
@@ -98,7 +98,7 @@ export default Managements
 function Business2(){
 const[data,setData]=useState([])
 useEffect(()=>{
-    axios.get("https://udemi-pbit.onrender.com/api/searchData")
+    axios.get("http://localhost:4005/api/searchData")
     .then((response)=>
       setData(response.data)
     )
@@ -151,8 +151,11 @@ Not sure? All courses have a 30-day money-back guarantee</div>
  </div>
  <div className="arrow">
 <div className="sort-by">
-<div className="sort">sort by</div>
+  <div>
+  <div className="sort">sort by</div>
 <div className="most-popular">Most Popular</div>
+  </div>
+
 <div>
 <img src="https://cdn-icons-png.flaticon.com/512/2985/2985150.png" height="20px" width="20px" alt="not found"/>
 </div>
@@ -168,7 +171,7 @@ Not sure? All courses have a 30-day money-back guarantee</div>
 function Business6(){
 const[data,setData]=useState([])
 useEffect(()=>{
-    axios.get("https://udemi-pbit.onrender.com/api/searchData")
+    axios.get("http://localhost:4005/api/searchData")
     .then((response)=>
       setData(response.data)
     )

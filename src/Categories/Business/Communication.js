@@ -7,7 +7,7 @@ import Footer from "../../Footer/Footer"
 const Communication = () => {
   const[data,setData]=useState([])
     useEffect(()=>{
-        axios.get("https://udemi-pbit.onrender.com/api/searchData")
+        axios.get("http://localhost:4005/api/searchData")
         .then((response)=>
           setData(response.data)
         )
@@ -99,7 +99,7 @@ export default Communication
 function Business2(){
   const[data,setData]=useState([])
   useEffect(()=>{
-      axios.get("https://udemi-pbit.onrender.com/api/searchData")
+      axios.get("http://localhost:4005/api/searchData")
       .then((response)=>
         setData(response.data)
       )
@@ -140,28 +140,31 @@ return(
 function Business3(){
   return(
     <>
-    <div className="All-courses">
-      <h2>All Business courses</h2>
-      <div className="mess-box">
-        <img className="mess-alert" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHKUBa1AnpqqCWPudE-oNJm9aOKRfZVDj7wIxT_oBrDNMIroHj34udwUmbdJoq8f_8EfU&usqp=CAU"alt="not found"/>
+  <div className="All-courses">
+    <h2>All Business courses</h2>
+    <div className="mess-box">
+      <img className="mess-alert" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHKUBa1AnpqqCWPudE-oNJm9aOKRfZVDj7wIxT_oBrDNMIroHj34udwUmbdJoq8f_8EfU&usqp=CAU"alt="not found"/>
 Not sure? All courses have a 30-day money-back guarantee</div>
 <div className="sort-filter">
 <div className="filter">
-  <img className="filter-icon" src="https://i.pinimg.com/564x/52/49/d2/5249d2bc62768d6049e5932e67481702.jpg" alt="not found"/>
-   <div className="mess-filter">Filter</div>
-   </div>
-   <div className="arrow">
-  <div className="sort-by">
-<div className="sort">sort by</div>
+<img className="filter-icon" src="https://i.pinimg.com/564x/52/49/d2/5249d2bc62768d6049e5932e67481702.jpg" alt="not found"/>
+ <div className="mess-filter">Filter</div>
+ </div>
+ <div className="arrow">
+<div className="sort-by">
+  <div>
+  <div className="sort">sort by</div>
 <div className="most-popular">Most Popular</div>
+  </div>
+
 <div>
-  <img src="https://cdn-icons-png.flaticon.com/512/2985/2985150.png" height="20px" width="20px" alt="not found"/>
+<img src="https://cdn-icons-png.flaticon.com/512/2985/2985150.png" height="20px" width="20px" alt="not found"/>
+</div>
+</div>
+</div>
+
+</div>
   </div>
-  </div>
-  </div>
-  
-  </div>
-    </div>
     <Business6/>
     </>
   )
@@ -169,7 +172,7 @@ Not sure? All courses have a 30-day money-back guarantee</div>
 function Business6(){
   const[data,setData]=useState([])
   useEffect(()=>{
-      axios.get("https://udemi-pbit.onrender.com/api/searchData")
+      axios.get("http://localhost:4005/api/searchData")
       .then((response)=>
         setData(response.data)
       )

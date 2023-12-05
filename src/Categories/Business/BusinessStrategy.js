@@ -5,8 +5,28 @@ import Footer from "../../Footer/Footer"
 
 const BusinessStrategy = () => {
   const[data,setData]=useState([])
+  const[cartdata,setcartData]=useState([])
+
+useEffect(()=>[
+axios.get("http://localhost:4005/api/cartfind")
+.then((response)=>setcartData(response.data))
+.catch((error)=>console.log(error))
+],[])
+
+const handleCart=async(item)=>{
+console.log(item.id)
+const handleData=cartdata.find((items)=>items.id===item.id)
+if(handleData){
+  alert("Data already exists")
+}
+else{
+  axios.post("http://localhost:4005/api/addtocart",item)
+}
+  }
+
+
   useEffect(()=>{
-      axios.get("https://udemi-pbit.onrender.com/api/searchData")
+      axios.get("http://localhost:4005/api/searchData")
       .then((response)=>
         setData(response.data)
       )
@@ -38,7 +58,7 @@ return(
     <div className="compo-writer">{item.writer}</div>
     <div className="compo-rate">{item.rate}</div>
     <div className="compo-price">₹{item.price}</div>
-
+<button onClick={()=>handleCart(item)}>Add to cart</button>
   </div>
 </div>
 </div>
@@ -98,7 +118,7 @@ export default BusinessStrategy
 function Business2(){
 const[data,setData]=useState([])
 useEffect(()=>{
-    axios.get("https://udemi-pbit.onrender.com/api/searchData")
+    axios.get("http://localhost:4005/api/searchData")
     .then((response)=>
       setData(response.data)
     )
@@ -139,7 +159,7 @@ return(
 function Business3(){
 return(
   <>
-  <div className="All-courses">
+   <div className="All-courses">
     <h2>All Business courses</h2>
     <div className="mess-box">
       <img className="mess-alert" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHKUBa1AnpqqCWPudE-oNJm9aOKRfZVDj7wIxT_oBrDNMIroHj34udwUmbdJoq8f_8EfU&usqp=CAU"alt="not found"/>
@@ -171,7 +191,7 @@ Not sure? All courses have a 30-day money-back guarantee</div>
 function Business6(){
 const[data,setData]=useState([])
 useEffect(()=>{
-    axios.get("https://udemi-pbit.onrender.com/api/searchData")
+    axios.get("http://localhost:4005/api/searchData")
     .then((response)=>
       setData(response.data)
     )

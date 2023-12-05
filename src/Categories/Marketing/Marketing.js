@@ -6,7 +6,7 @@ import Footer from "../../Footer/Footer"
 const Marketing = () => {
   const[data,setData]=useState([])
   useEffect(()=>{
-      axios.get("https://udemi-pbit.onrender.com/api/searchData")
+      axios.get("http://localhost:4005/api/searchData")
       .then((response)=>
         setData(response.data)
       )
@@ -98,7 +98,7 @@ export default Marketing
 function Business2(){
 const[data,setData]=useState([])
 useEffect(()=>{
-    axios.get("https://udemi-pbit.onrender.com/api/searchData")
+    axios.get("http://localhost:4005/api/searchData")
     .then((response)=>
       setData(response.data)
     )
@@ -171,7 +171,7 @@ Not sure? All courses have a 30-day money-back guarantee</div>
 function Business6(){
 const[data,setData]=useState([])
 useEffect(()=>{
-    axios.get("https://udemi-pbit.onrender.com/api/searchData")
+    axios.get("http://localhost:4005/api/searchData")
     .then((response)=>
       setData(response.data)
     )
