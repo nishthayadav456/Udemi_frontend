@@ -8,7 +8,6 @@ function Signup(){
   const [data, setData] = useState(
     {
         name: "",
-        phone: "",
         email: "",
         password: ""
     }
@@ -20,10 +19,10 @@ function Signup(){
   const handleClick=(e)=>{
     e.preventDefault()
     console.log(data)
-    axios.post("",data)
+    axios.post("http://localhost:4005/api/register",data)
    
     .then((res)=>{
-      alert(res.data.message);
+      alert(res.data.mess);
   
       localStorage.setItem("token",res.data.token)
       localStorage.setItem("name",res.data.name)

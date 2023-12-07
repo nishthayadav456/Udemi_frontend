@@ -2,6 +2,7 @@ import React, { useEffect,useState} from 'react'
 import axios from 'axios'
 import {loadStripe} from '@stripe/stripe-js';
 import './Cart.css'
+import Footer from '../../Footer/Footer';
 const Cart = () => {
     const [cartdata,setCartData]=useState()
     const [totalprice,settotalPrice]=useState(0)
@@ -61,6 +62,7 @@ const Cart = () => {
     <div>
   
             <div>
+              <h1>Shopping cart</h1><hr/>
             {cartdata&& cartdata.map((item,index)=>{
                     return(
                         <div  className="contents" key={index}>
@@ -73,7 +75,7 @@ const Cart = () => {
                             <div>
                 
                   </div>
-                  <h2 className="price">{ item.price}</h2>
+                  <h2 className="price">₹{item.price}</h2>
                         </div>
                     )
                 })
@@ -85,10 +87,11 @@ const Cart = () => {
           
         </div>
         <div className="buying">
-          <button className='buybtn' onClick={makePayment}>Buy Now</button>
+          <button className='buybtn' onClick={makePayment}>Checkout</button>
         </div>
-
+<Footer/>
     </div>
+    
     
   )
 }

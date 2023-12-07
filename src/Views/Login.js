@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 
 function Login(){
   const navi=useNavigate()   
-   
     const [data, setData] = useState(
         {
            
@@ -21,11 +20,8 @@ function Login(){
     const handleClick=(e)=>{
          e.preventDefault()
         console.log(data)
-        axios.post("",data)
-        
-         .then((res)=>{
-          
-            alert(res.data.message);
+        axios.post("http://localhost:4005/api/login",data).then((res)=>{
+            alert(res.data.mess);
             console.log(res.data)
             setData(res.data);
             localStorage.setItem("token",res.data.token)

@@ -70,11 +70,13 @@ import TeacherTraining from "../Categories/Teaching&Academic/TeacherTraining";
 import Math from "../Categories/Teaching&Academic/Math";
 import Cart from "../Categories/Cart/Cart";
 import SeachBar from "../NavBar/SeachBar";
+import Signup from "../Views/Signup";
+import Login from "../Views/Login";
 
 const NavBar = () => {
   const navi=useNavigate()
   const [Searchdata,setSearchData]=useState()
-
+  const [showSubcategories, setShowSubcategories] = useState(false);
   const handleChange=(e)=>{
     setSearchData(e.target.value)
     
@@ -92,6 +94,26 @@ const handleSearch=()=>{
   navi('/search',{state:search})
   setSearchData('')
 }
+const toggleSubcategories = () => {
+  setShowSubcategories(!showSubcategories);
+};
+const handlelogout=()=>{
+localStorage.clear()
+logout()
+
+}
+function logout(){
+  window.location.reload()
+}
+
+const [name,setName]=useState("")
+const token=localStorage.getItem("token")
+
+  
+useEffect(()=>{
+  setName(token)
+},[token])
+
   return (
   
     <div>
@@ -104,104 +126,123 @@ const handleSearch=()=>{
     </NavLink>
      <div className="dropdown">
     
-      <p className="category">Categories </p>
-      <div className="dropdown-content">
-      <NavLink to="/business">Business
-      <div className="dropdown-content1">
+      <p className="category">Categories  </p>
+      <div className="dropdown-content" >
+      <NavLink to="/business" className="category1" onMouseOver={toggleSubcategories}>Business</NavLink>
+    <div className="mycategory sub-category1"  >
             <NavLink to="/communication">Communication </NavLink>
             <NavLink to="/operation">Operation </NavLink>
             <NavLink to="/management">Management </NavLink>
             <NavLink to="/businessstrategy">Business Strategy </NavLink>
             <NavLink to="/hr">Human Resources </NavLink>
           </div>
-      </NavLink>
-      <NavLink to="/financeaccounting">Finance&Accounting
-      <div className="dropdown-content1">
+          
+      
+      <NavLink to="/financeaccounting" className="category2">Finance&Accounting  </NavLink>
+    
+      <div className="sub-category2 mycategory" >
       <NavLink to="/accountingbook">Accounting & Bookkeeping</NavLink>
       <NavLink to="/compliance">Compliance</NavLink>
       <NavLink to="/economic">Economic</NavLink>
       <NavLink to="/finance" >Finance</NavLink>
       <NavLink to="/Taxes">Taxes</NavLink>
           </div>
-       </NavLink>
-      <NavLink to="/itsoftware">IT &Software 
-      <div className="dropdown-content1">
+            
+     
+      <NavLink to="/itsoftware" className="category3">IT &Software </NavLink>
+     
+      <div className="sub-category3 mycategory"  >
       <NavLink to="/itcertification">IT Certification</NavLink>
       <NavLink to="/networkSecurity">Network Security</NavLink>
       <NavLink to="/hardware">Hardware</NavLink>
       <NavLink to="/operatingSystem">Operating System</NavLink>
       <NavLink to="/otherITsoftware">Other IT Software</NavLink>
       </div>
-     </NavLink>
+        
+     
 
-      <NavLink to="/design">Design
-      <div className="dropdown-content1">
+      <NavLink to="/design" className="category4">Design  
+      </NavLink>
+    
+      <div className="sub-category4 mycategory"  >
       <NavLink to="/webDesign">Web Design</NavLink>
       <NavLink to="/gamedesign">Game Design</NavLink>
       <NavLink to="/animation">3D Animation</NavLink>
       <NavLink to="/fashionDesign">Fashion Design</NavLink>
       <NavLink to="/otherDesign">Other Design</NavLink>
       </div>
-      </NavLink>
+      
 
-      <NavLink to="/marketing">Marketing
-      <div className="dropdown-content1">
+      <NavLink to="/marketing" className="category5">Marketing </NavLink>
+   
+      <div className="sub-category5 mycategory"  >
       <NavLink to="/digitalMarketing">Digital Marketing</NavLink>
       <NavLink to="/socialMediaMarketing">Social Media Marketing</NavLink>
       <NavLink to="/publicRelationship">Public Relationship</NavLink>
       <NavLink to="/productMarketing">Product Marketing</NavLink>
       <NavLink to="/contentMarketing">Content Marketing</NavLink>
       </div>
-      </NavLink>
+        
+     
 
-      <NavLink to="/lifestyle">LifeStyle
-      <div className="dropdown-content1">
+      <NavLink to="/lifestyle" className="category6">LifeStyle</NavLink>
+      
+      <div className="sub-category6 mycategory"  >
       <NavLink to="/artCrafts">Art & Crafts</NavLink>
       <NavLink to="/beautyMakeup">Beauty & Makeup</NavLink>
       <NavLink to="/foodBeverage">Food & Beverage</NavLink>
       <NavLink to="/petCaretraining">Pet Care & Training</NavLink>
       <NavLink to="/travel">Travel</NavLink>
       </div>
-      </NavLink>
+        
+      
 
-      <NavLink to="/photography">Photography &video
-      <div className="dropdown-content1">
+      <NavLink to="/photography" className="category7">Photography &video</NavLink>
+     
+      <div className="sub-category7 mycategory"  >
       <NavLink to="/digitalPhotography">Digital Photography</NavLink>
       <NavLink to="/photography">Photography</NavLink>
       <NavLink to="/videoDesign">Video Design</NavLink>
       <NavLink to="/commercialPhotography">Commercial Photography</NavLink>
       <NavLink to="/photographyTools">Photography Tools</NavLink>
       </div>
-      </NavLink>
+        
+      
 
-      <NavLink to="/music">Music
-      <div className="dropdown-content1">
+      <NavLink to="/music" className="category8">Music </NavLink>
+      
+      <div className="sub-category8 mycategory"  >
       <NavLink to="/instruments">Instruments</NavLink>
       <NavLink to="/musicProduction">Music Production</NavLink>
       <NavLink to="/vocal">Vocal</NavLink>
       <NavLink to="/musicSoftware">Music Software</NavLink>
       <NavLink to="/musicTechniques">Music Techniques</NavLink>
       </div>
-      </NavLink>
-      <NavLink to="/healthFitness">Health&fitness 
-      <div className="dropdown-content1">
+        
+     
+      <NavLink to="/healthFitness"className="category9">Health&fitness </NavLink> 
+      
+      <div className="sub-category9 mycategory"  >
       <NavLink to="/fitness">Fitness</NavLink>
       <NavLink to="/sports">Sports</NavLink>
       <NavLink to="/mentalhealth">Mental Health</NavLink>
       <NavLink to="/yoga">Yoga</NavLink>
       <NavLink to="/dance">Dance</NavLink>
       </div>
-      </NavLink>
+        
+     
 
-      <NavLink to="/Teaching">Teaching&Academics 
-      <div className="dropdown-content1">
+      <NavLink to="/Teaching"className="category10">Teaching&Academics 
+      
+      <div className="sub-category10 mycategory"  >
       <NavLink to="/engineering">Engineering</NavLink>
       <NavLink to="/math">Math</NavLink>
       <NavLink to="/socialScience">Social Science</NavLink>
       <NavLink to="/science">Science</NavLink>
       <NavLink to="/teacherTraining">Teacher Training</NavLink>
       </div>
-      </NavLink>
+      </NavLink> 
+     
       </div>
      </div>
         
@@ -220,14 +261,20 @@ const handleSearch=()=>{
      
        
     
+{(name)?
+<div>
+"mylearning" <button onClick={handlelogout}>Logout</button>
+</div>:
 
     <div id="login-signup">
       <button className="loginbtn">Login</button>
       <button className="signupbtn">Signup</button>
+      </div>
+}
       <div className="language-icon">
     <GrLanguage className="language-icon1" />
     </div>
-    </div>
+  
     
   </header>
   
@@ -312,6 +359,8 @@ const handleSearch=()=>{
     <Route path="/techonudemy" element={<Techonudemy/>}/>
     <Route path="/addtocart" element={<Cart/>}/>
     <Route path="/search" element={<SeachBar/>}/>
+    <Route path="/register" element={<Signup/>}/>
+    <Route path="/login" element={<Login/>}/>
 
     <Route path="/footer" element={<Footer/>}/>
   </Routes>

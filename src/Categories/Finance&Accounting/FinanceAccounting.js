@@ -6,6 +6,28 @@ import Footer from "../../Footer/Footer"
 
 const FinanceAccounting = () => {
   const[data,setData]=useState([])
+  const[cartdata,setcartData]=useState([])
+
+  useEffect(()=>{
+    axios.get("http://localhost:4005/api/cartfind")
+    .then((response)=>setcartData(response.data))
+    .catch((error)=>console.log(error))
+    },[])
+    
+    const handleCart=async(item)=>{
+    console.log(item.id)
+    const handleData=cartdata.find((items)=>items.id===item.id)
+    if(handleData){
+      alert("Data already exists")
+    }
+    else{
+      await axios.post("http://localhost:4005/api/addtocart",item)
+    }
+      }
+    
+
+
+
   useEffect(()=>{
       axios.get("http://localhost:4005/api/searchData")
       .then((response)=>
@@ -39,6 +61,7 @@ return(
     <div className="compo-writer">{item.writer}</div>
     <div className="compo-rate">{item.rate}</div>
     <div className="compo-price">₹{item.price}</div>
+    <button onClick={()=>handleCart(item)}>Add to cart</button>
 
   </div>
 </div>
@@ -171,6 +194,25 @@ Not sure? All courses have a 30-day money-back guarantee</div>
 }
 function Business6(){
 const[data,setData]=useState([])
+const[cartdata,setcartData]=useState([])
+
+useEffect(()=>{
+  axios.get("http://localhost:4005/api/cartfind")
+  .then((response)=>setcartData(response.data))
+  .catch((error)=>console.log(error))
+  },[])
+  
+  const handleCart=async(item)=>{
+  console.log(item.id)
+  const handleData=cartdata.find((items)=>items.id===item.id)
+  if(handleData){
+    alert("Data already exists")
+  }
+  else{
+    await axios.post("http://localhost:4005/api/addtocart",item)
+  }
+    }
+  
 useEffect(()=>{
     axios.get("http://localhost:4005/api/searchData")
     .then((response)=>
@@ -243,15 +285,19 @@ return(
     </div>
     <div className="right-business1">
     <div className="course-heading">{item.heading.slice(0,55)}..</div>
-   
     <div className="course-writer">{item.writer}</div>
     <div className="course-rate">{item.rate}</div>
-    <div><button className="bestseller">BestSeller</button></div>
+    <div>
+    <button className="bestseller">BestSeller</button></div>
+    <button  className="bestseller1"onClick={()=>handleCart(item)}>Add to cart</button>
     </div>
     <div>
     <div className="course-price">₹{item.price}</div>
     </div>
-</div>
+    <div>
+      
+    </div>
+  </div>
 
 )
    })}

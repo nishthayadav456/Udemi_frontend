@@ -89,6 +89,7 @@ body {
 .dropdown-content {
     display: none;
     position: absolute;
+   
     background-color: #f3efef;
     min-width: 200px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
@@ -115,19 +116,37 @@ body {
 
   .dropdown-content1 {
     display: none;
-    position: absolute;
-    left:200px ;
-    top:0px;
+    /* position: absolute;
+    left:100% ;
+    top:0px; */
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+  
   }
   
   .dropdown:hover .dropdown-content1 {
     display: block;
+   
+    
   }
-  
+ 
+  .mycategory{
+   
+    position: absolute;
+    left:13vw;
+    top:0vh;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  }
+  .sub-category10{
+    display: none;
+  }
+  .category10:hover.sub-category10{
+    display: block;
+  }
+
   /* Style the nested nav links */
   .dropdown-content1 a {
     padding: 12px 16px;
@@ -793,6 +812,15 @@ margin-top: 40px;
     font-weight: bolder;
     padding: 7px;
 }
+.bestseller1{
+    border: none;
+    background-color: rgb(142, 55, 142);
+    color:white;
+    font-weight: bolder;
+    margin-top: 5px;
+    padding: 7px;
+}
+
 .rating-no{
   margin-top: -0.55px;
   font-size: 15px;

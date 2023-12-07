@@ -47,13 +47,17 @@
   }
   .buying {
     margin-top: 20px;
+  
+   
   }
   
   .buybtn {
-    background-color: #4c82af;
+    background-color:#a435f0;
     color: white;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     font-size: 16px;
+    font-weight: bolder;
+  
   }

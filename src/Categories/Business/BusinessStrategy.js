@@ -7,11 +7,11 @@ const BusinessStrategy = () => {
   const[data,setData]=useState([])
   const[cartdata,setcartData]=useState([])
 
-useEffect(()=>[
+useEffect(()=>{
 axios.get("http://localhost:4005/api/cartfind")
 .then((response)=>setcartData(response.data))
 .catch((error)=>console.log(error))
-],[])
+},[])
 
 const handleCart=async(item)=>{
 console.log(item.id)
@@ -58,7 +58,10 @@ return(
     <div className="compo-writer">{item.writer}</div>
     <div className="compo-rate">{item.rate}</div>
     <div className="compo-price">₹{item.price}</div>
-<button onClick={()=>handleCart(item)}>Add to cart</button>
+    <div className="">
+    <button onClick={()=>handleCart(item)}>Add to cart</button>
+      </div>
+
   </div>
 </div>
 </div>
