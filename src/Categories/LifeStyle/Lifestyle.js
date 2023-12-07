@@ -68,19 +68,19 @@ return(
     <div>
       <div className="table1">
         <div className="tr">
-          <div className="td"> Business Strategy</div>
-          <div className="td">Management Consulting</div>
-          <div className="td">Digital Transformation</div>
-          <div className="td">Artificial Intelligence</div>
+          <div className="td"> Reiki</div>
+          <div className="td">Chess</div>
+          <div className="td">Energy Healing</div>
+          <div className="td">Astrology</div>
          
         </div>
         </div>
         <div className="table1">
         <div className="tr">
-          <div className="td">Design Thinking</div>
-          <div className="td">IT Fundamentals</div>
-          <div className="td">Business Model</div>
-          <div className="td">ChatGPT</div>
+          <div className="td">Painting</div>
+          <div className="td">Spiritual Healing</div>
+          <div className="td">tarot Reading</div>
+          <div className="td">Drawing</div>
         
         </div>
         </div>

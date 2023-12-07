@@ -68,19 +68,19 @@ return(
     <div>
       <div className="table1">
         <div className="tr">
-          <div className="td"> Business Strategy</div>
-          <div className="td">Management Consulting</div>
-          <div className="td">Digital Transformation</div>
-          <div className="td">Artificial Intelligence</div>
+          <div className="td"> Blender</div>
+          <div className="td">Figma</div>
+          <div className="td">Adobe Photoshop</div>
+          <div className="td">3D Modeling</div>
          
         </div>
         </div>
         <div className="table1">
         <div className="tr">
-          <div className="td">Design Thinking</div>
-          <div className="td">IT Fundamentals</div>
-          <div className="td">Business Model</div>
-          <div className="td">ChatGPT</div>
+          <div className="td">user Experience Design</div>
+          <div className="td">Canva</div>
+          <div className="td">Drawing</div>
+          <div className="td">AutoCAD</div>
         
         </div>
         </div>

@@ -66,19 +66,19 @@ return(
   <div>
     <div className="table1">
       <div className="tr">
-        <div className="td"> Business Strategy</div>
-        <div className="td">Management Consulting</div>
-        <div className="td">Digital Transformation</div>
-        <div className="td">Artificial Intelligence</div>
+        <div className="td">Guitar</div>
+        <div className="td">Music Production</div>
+        <div className="td">Singing</div>
+        <div className="td">Piano</div>
        
       </div>
       </div>
       <div className="table1">
       <div className="tr">
-        <div className="td">Design Thinking</div>
-        <div className="td">IT Fundamentals</div>
-        <div className="td">Business Model</div>
-        <div className="td">ChatGPT</div>
+        <div className="td">Music Theory</div>
+        <div className="td">Music Composition</div>
+        <div className="td">FL Studio</div>
+        <div className="td">Logic Pro</div>
       
       </div>
       </div>

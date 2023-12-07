@@ -68,19 +68,19 @@ return(
     <div>
       <div className="table1">
         <div className="tr">
-          <div className="td"> PMI Project Management professional (PMP)</div>
-          <div className="td">Project Management</div>
-          <div className="td">Data Modeling</div>
-          <div className="td">Business Analysis</div>
+          <div className="td"> Ethical hacking</div>
+          <div className="td">AWS Certified Cloud</div>
+          <div className="td">CyberSecurity</div>
+          <div className="td">Linux</div>
          
         </div>
         </div>
         <div className="table1">
         <div className="tr">
-          <div className="td">PMI PMBOK</div>
-          <div className="td">Data Analysis</div>
-          <div className="td">PMI Certified Associate in Project Management</div>
-          <div className="td">Tableau</div>
+          <div className="td">ChatGPT</div>
+          <div className="td">ComTIA Security+</div>
+          <div className="td">Information Technology</div>
+          <div className="td">Information Security</div>
         
         </div>
         </div>

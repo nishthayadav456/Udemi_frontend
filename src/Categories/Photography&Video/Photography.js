@@ -67,19 +67,19 @@ return(
     <div>
       <div className="table1">
         <div className="tr">
-          <div className="td"> Business Strategy</div>
-          <div className="td">Management Consulting</div>
-          <div className="td">Digital Transformation</div>
-          <div className="td">Artificial Intelligence</div>
+          <div className="td"> Photography</div>
+          <div className="td">Adobe Premiere</div>
+          <div className="td">video Editing</div>
+          <div className="td">Video Production</div>
          
         </div>
         </div>
         <div className="table1">
         <div className="tr">
-          <div className="td">Design Thinking</div>
-          <div className="td">IT Fundamentals</div>
-          <div className="td">Business Model</div>
-          <div className="td">ChatGPT</div>
+          <div className="td">Filmmaking</div>
+          <div className="td">AdobeAfterEffects</div>
+          <div className="td">Adobe LightRoom</div>
+          <div className="td">Color Grading</div>
         
         </div>
         </div>

@@ -20,7 +20,7 @@ if(handleData){
   alert("Data already exists")
 }
 else{
-  axios.post("http://localhost:4005/api/addtocart",item)
+  await axios.post("http://localhost:4005/api/addtocart",item)
 }
   }
 

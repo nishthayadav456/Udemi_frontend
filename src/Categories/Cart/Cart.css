@@ -1,0 +1,59 @@
+.contents {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #c1b3b3;
+    padding: 10px 0;
+  }
+  
+  .contentsimg {
+    width: 200px;
+    height: 200px;
+    margin-right: 10px;
+   
+  }
+  
+  .content1 {
+    flex-grow: 1;
+  }
+  .cartremove {
+    background-color: #9da5c9;
+    color: black;
+    border: none;
+    padding: 10px 11px;
+    cursor: pointer;
+    font-weight: bolder;
+  }
+  
+  .quantbtn {
+    background-color: #eee;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: black;
+  }
+  
+  .quantity {
+    margin: 0 10px;
+  }
+  .price {
+    font-size: 18px;
+  }
+  .totalitem {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  .buying {
+    margin-top: 20px;
+  }
+  
+  .buybtn {
+    background-color: #4c82af;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+  }

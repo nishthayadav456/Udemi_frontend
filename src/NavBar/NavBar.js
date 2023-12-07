@@ -5,7 +5,7 @@ import { GrLanguage } from "react-icons/gr";
 import './Navbar.css'
 import axios from "axios";
 import Business from "../Categories/Business/Business";
-import { BrowserRouter, NavLink, Route, Routes } from "react-router-dom";
+import {  NavLink, Route, Routes, useNavigate } from "react-router-dom";
 import Home from "../Home/Home";
 import Communication from "../Categories/Business/Communication";
 import Design from "../Categories/Design/Design";
@@ -23,7 +23,7 @@ import Photography from "../Categories/Photography&Video/Photography";
 import Music from "../Categories/Music&Arts/Music";
 import HealthFitness from "../Categories/Health&Fitness/HealthFitness";
 import Teaching from "../Categories/Teaching&Academic/Teaching";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import AccountingBookeeping from "../Categories/Finance&Accounting/AccountingBookeeping";
 import Compliance from "../Categories/Finance&Accounting/Compliance";
 import Economic from "../Categories/Finance&Accounting/Economic";
@@ -68,32 +68,34 @@ import SocialScience from "../Categories/Teaching&Academic/SocialScience";
 import Science from "../Categories/Teaching&Academic/Science";
 import TeacherTraining from "../Categories/Teaching&Academic/TeacherTraining";
 import Math from "../Categories/Teaching&Academic/Math";
+import Cart from "../Categories/Cart/Cart";
+import SeachBar from "../NavBar/SeachBar";
+
 const NavBar = () => {
+  const navi=useNavigate()
   const [Searchdata,setSearchData]=useState()
+
   const handleChange=(e)=>{
     setSearchData(e.target.value)
     
   }
+// console.log(Searchdata)
 
- const handleSearch = async () => {
-  try {
-    // Assuming you have an API endpoint for search on the backend
-    const response = await axios.get(`/api/searchbar?category=${Searchdata}`);
-    
-    // Handle the response data as needed (maybe update state with search results)
-    console.log('Search Results:', response.data);
-  } catch (error) {
-    console.error('Error searching:', error);
-  }
 
-  // Clear the search input after search
-  setSearchData('');
-};
-
+const [search,setSearch]=useState()
+useEffect(()=>{
+  axios.get(`http://localhost:4005/api/searchbar?category=${Searchdata}`)
+  .then((response)=>setSearch(response.data))
+  .catch((error)=>console.log(error))
+},[Searchdata])
+const handleSearch=()=>{
+  navi('/search',{state:search})
+  setSearchData('')
+}
   return (
   
     <div>
-       <BrowserRouter>
+       
       <header>
     <NavLink to="/">
     <div id="logo">
@@ -210,7 +212,10 @@ const NavBar = () => {
       <div id="heading"> 
       <NavLink to="/techonudemy" style={{textDecoration:"none"}}>
       <p className="techon">  Tech on Udemy</p></NavLink>
+      <NavLink to="/addtocart">
       <MdOutlineShoppingCart id="add-to-cart"/>
+      </NavLink>
+     
       </div>
      
        
@@ -305,9 +310,12 @@ const NavBar = () => {
     <Route path="/teacherTraining" element={<TeacherTraining/>}/>
 
     <Route path="/techonudemy" element={<Techonudemy/>}/>
+    <Route path="/addtocart" element={<Cart/>}/>
+    <Route path="/search" element={<SeachBar/>}/>
+
     <Route path="/footer" element={<Footer/>}/>
   </Routes>
-  </BrowserRouter> 
+  
 
     </div>
     

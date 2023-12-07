@@ -31,7 +31,7 @@ const Business = () => {
 return(
    <div>
   
-        <div key={index}>
+  <div key={index}>
          <div className="sub-parent">
         
       <img className="compo-image" src={item.image} alt="not found"/>
@@ -111,26 +111,26 @@ function Business2(){
       <div className="popular-instructor">
       
       {data.filter((item)=>item.category==="Business2").map((item,index)=>{
-  console.log(item)
-return(
-   <div>
-  
-        <div key={index}>
-         <div className="sub-instructor">
-        <div className="left-business">
-      <img className="popular-image" src={item.image} alt="not found"/>
-      </div>
-      <div className="right-business">
-      <div className="popular-heading">{item.heading.slice(0,35)}..</div>
-      <div className="popular-writer">{item.writer.slice(0,46)}..</div>
-      <div className="popular-rate">{item.rate}</div>
-      <div className="popular-student">{item.student}  Students</div>
-      <div className="popular-courses">{item.courses}  courses</div>
-      </div>
-    </div>
- </div>
-</div>
-)
+          console.log(item)
+        return(
+          <div>
+          
+          <div key={index}>
+                <div className="sub-instructor">
+                <div className="left-business">
+              <img className="popular-image" src={item.image} alt="not found"/>
+              </div>
+              <div className="right-business">
+              <div className="popular-heading">{item.heading.slice(0,35)}..</div>
+              <div className="popular-writer">{item.writer.slice(0,46)}..</div>
+              <div className="popular-rate">{item.rate}</div>
+              <div className="popular-student">{item.student}  Students</div>
+              <div className="popular-courses">{item.courses}  courses</div>
+              </div>
+            </div>
+        </div>
+        </div>
+        )
      })}
      </div>
      <Business3/>
@@ -235,23 +235,23 @@ return(
 return(
    
  
-        <div className="child-compo" key={index}>
+  <div className="child-compo" key={index}>
          
       
-        <div className="left-coursImg">
-      <img className="course-image" src={item.image} alt="not found"/>
-      </div>
-      <div className="right-business1">
-      <div className="course-heading">{item.heading.slice(0,55)}..</div>
-      <div className="course-title">{item.title.slice(0,30)}..</div>
-      <div className="course-writer">{item.writer}</div>
-      <div className="course-rate">{item.rate}</div>
-      <div><button className="bestseller">BestSeller</button></div>
-      </div>
-      <div>
-      <div className="course-price">₹{item.price}</div>
-      </div>
- </div>
+  <div className="left-coursImg">
+<img className="course-image" src={item.image} alt="not found"/>
+</div>
+<div className="right-business1">
+<div className="course-heading">{item.heading.slice(0,55)}..</div>
+
+<div className="course-writer">{item.writer}</div>
+<div className="course-rate">{item.rate}</div>
+<div><button className="bestseller">BestSeller</button></div>
+</div>
+<div>
+<div className="course-price">₹{item.price}</div>
+</div>
+</div>
 
 )
      })}

@@ -68,19 +68,19 @@ return(
   <div>
     <div className="table1">
       <div className="tr">
-        <div className="td"> Business Strategy</div>
-        <div className="td">Management Consulting</div>
-        <div className="td">Digital Transformation</div>
-        <div className="td">Artificial Intelligence</div>
+        <div className="td">English Language</div>
+        <div className="td">Math</div>
+        <div className="td">Spanish Language</div>
+        <div className="td">IELTS</div>
        
       </div>
       </div>
       <div className="table1">
       <div className="tr">
-        <div className="td">Design Thinking</div>
-        <div className="td">IT Fundamentals</div>
-        <div className="td">Business Model</div>
-        <div className="td">ChatGPT</div>
+        <div className="td">German Language</div>
+        <div className="td">English grammar</div>
+        <div className="td">French Language</div>
+        <div className="td">Japanese Language</div>
       
       </div>
       </div>

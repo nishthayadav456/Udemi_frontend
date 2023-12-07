@@ -67,18 +67,18 @@ return(
     <div>
       <div className="table1">
         <div className="tr">
-          <div className="td"> Business Strategy</div>
-          <div className="td">Management Consulting</div>
-          <div className="td">Digital Transformation</div>
-          <div className="td">Artificial Intelligence</div>
+          <div className="td">Digital Marketing</div>
+          <div className="td">Social Media Marketing</div>
+          <div className="td">Facebook Ads</div>
+          <div className="td">Instagram Marketing</div>
          
         </div>
         </div>
         <div className="table1">
         <div className="tr">
-          <div className="td">Design Thinking</div>
-          <div className="td">IT Fundamentals</div>
-          <div className="td">Business Model</div>
+          <div className="td">Google Ads</div>
+          <div className="td">Copywriting</div>
+          <div className="td">Facebook Marketing</div>
           <div className="td">ChatGPT</div>
         
         </div>
