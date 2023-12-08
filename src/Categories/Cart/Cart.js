@@ -24,7 +24,7 @@ const Cart = () => {
         .then((response)=>setCartData(response.data))
 
         .catch((error)=>console.log(error))
-    },[])
+    },[cartdata])
         console.log(cartdata)
 
     const makePayment=async ()=>{
@@ -57,7 +57,13 @@ const Cart = () => {
     if(result.error) {
       console.log(result.error);
     }
-    }    
+    } 
+    const changehandle=async(id)=>{
+      console.log(id)
+ await axios.post("http://localhost:4005/api/removecart",{id:id})
+    }
+      
+       
   return (
     <div>
   
@@ -70,7 +76,7 @@ const Cart = () => {
                             <img className='contentsimg'src={item.image} alt="not found"/>
                             <div className="content1">
                             <h5 style={{width:"40%"}}>{item.heading.slice(0,20)}</h5>
-                            <button className="cartremove">Remove Cart</button>
+                            <button className="cartremove" onClick={()=>changehandle(item.id)}>Remove Cart</button>
                             </div>
                             <div>
                 

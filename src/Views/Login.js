@@ -1,7 +1,8 @@
 import { useState } from "react"
 import './Style.css'
 import axios from "axios"
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+
 
 function Login(){
   const navi=useNavigate()   
@@ -25,6 +26,8 @@ function Login(){
             console.log(res.data)
             setData(res.data);
             localStorage.setItem("token",res.data.token)
+            localStorage.setItem("name",res.data.name)
+            localStorage.setItem("email",res.data.email)
             if(res.data.token){
               navi("/")
             }
@@ -46,19 +49,25 @@ function Login(){
       }
     
     return(
+      <div>
         <div className="body">
       
         <form>
-        <h1 className="formheading">LOGIN </h1>
-        <p>Login now and get full access to our app</p>
-            <label  htmlFor="email">Email : </label>
-            <input className="input-bar" type="email" placeholder="Enter your email" value={data.email} id="email" name="email" onChange={changeHandle}/><br/><br/>
-            <label  htmlFor="password">Password : </label>
-            <input className="input-bar"  type="password" placeholder="Enter your password" value={data.password}id="password" name="password" onChange={changeHandle} /><br/><br/>
+        <h1 className="formheading">Log in to your Udemy account </h1>
+        
+            <label  htmlFor="email"> </label>
+            <input className="input-bar" type="email" placeholder="Email" value={data.email} id="email" name="email" onChange={changeHandle}/><br/><br/>
+            <label  htmlFor="password"> </label>
+            <input className="input-bar"  type="password" placeholder="Password" value={data.password}id="password" name="password" onChange={changeHandle} /><br/><br/>
             <button className="btn1" onClick={handleClick}>login</button>
-            
-         
+            OR <hr/>
+            <div className="box1">
+            Don't have an account ?<NavLink to="/register"> Signup </NavLink> <NavLink to="/login"> Log In </NavLink> with Your Organization
+            </div>
         </form>
+        
+        </div>
+        
         </div>
     )
     }

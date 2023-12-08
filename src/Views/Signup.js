@@ -44,19 +44,20 @@ function Signup(){
       <div className="body">
       
       <form>
-      <h1  className="formheading">SignUp</h1>
-      <p>Signup now and get full access to our app</p>
-          <label htmlFor="name">Name : {" "}</label>
-          <input className="input-bar" type="text" placeholder="Enter your name" value={data.name} id="name" name="name" onChange={changeHandle}/>
-         <label htmlFor="email">Email :{" "} </label>
-          <input className="input-bar" type="email" placeholder="Enter your email" value={data.email} id="email" name="email" onChange={changeHandle}/>
-          <label  htmlFor="password">Password : {" "}</label>
-          <input className="input-bar"type="password" placeholder="Enter your password" value={data.password} id="password" name="password" onChange={changeHandle}/>
-          <button className="btn1"  onClick={handleClick}>SignUp</button>
-          <div className="or1" style={{color:"white"}}>Or</div><br/>
-        <NavLink to="/login" style={{color:"white"}}>
+      <h1  className="formheading">Sign up and start learning</h1>
+      
+          <label htmlFor="name"></label>
+          <input className="input-bar" type="text" placeholder="Full Name" value={data.name} id="name" name="name" onChange={changeHandle}/><br/><br/>
+         <label htmlFor="email"> </label>
+          <input className="input-bar" type="email" placeholder="Email" value={data.email} id="email" name="email" onChange={changeHandle}/><br/><br/>
+          <label  htmlFor="password"></label>
+          <input className="input-bar"type="password" placeholder="Password" value={data.password} id="password" name="password" onChange={changeHandle}/><br/><br/>
+          <button className="btn1"  onClick={handleClick}>SignUp</button><br/>
+          <div className="or1" style={{color:"black"}}>Already have an account?
+        <NavLink to="/login" style={{color:"black"}}>
           Go To Login Page
         </NavLink>
+        </div>
       </form>
       </div>
   )

@@ -72,11 +72,12 @@ import Cart from "../Categories/Cart/Cart";
 import SeachBar from "../NavBar/SeachBar";
 import Signup from "../Views/Signup";
 import Login from "../Views/Login";
+import Mylearning from "../Categories/Cart/Mylearning";
 
 const NavBar = () => {
   const navi=useNavigate()
   const [Searchdata,setSearchData]=useState()
-  const [showSubcategories, setShowSubcategories] = useState(false);
+  
   const handleChange=(e)=>{
     setSearchData(e.target.value)
     
@@ -94,9 +95,7 @@ const handleSearch=()=>{
   navi('/search',{state:search})
   setSearchData('')
 }
-const toggleSubcategories = () => {
-  setShowSubcategories(!showSubcategories);
-};
+
 const handlelogout=()=>{
 localStorage.clear()
 logout()
@@ -106,13 +105,15 @@ function logout(){
   window.location.reload()
 }
 
-const [name,setName]=useState("")
+// const [name1,setName1]=useState("")
 const token=localStorage.getItem("token")
+const name=localStorage.getItem("name")
+const email=localStorage.getItem("email")
 
   
-useEffect(()=>{
-  setName(token)
-},[token])
+// useEffect(()=>{
+//   setName1(token)
+// },[token])
 
   return (
   
@@ -121,130 +122,319 @@ useEffect(()=>{
       <header>
     <NavLink to="/">
     <div id="logo">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Udemy_logo.svg/2560px-Udemy_logo.svg.png" height="30px" width="100px" alt="not found"/>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Udemy_logo.svg/2560px-Udemy_logo.svg.png" height="30px" width="90px" alt="not found"/>
     </div>
     </NavLink>
-     <div className="dropdown">
     
-      <p className="category">Categories  </p>
-      <div className="dropdown-content" >
-      <NavLink to="/business" className="category1" onMouseOver={toggleSubcategories}>Business</NavLink>
-    <div className="mycategory sub-category1"  >
-            <NavLink to="/communication">Communication </NavLink>
-            <NavLink to="/operation">Operation </NavLink>
-            <NavLink to="/management">Management </NavLink>
-            <NavLink to="/businessstrategy">Business Strategy </NavLink>
-            <NavLink to="/hr">Human Resources </NavLink>
+      <div className="categories_parent">
+            <ul className="navbarParent">
+              <li className="categories_list">
+                <div className="categories_div">Categories</div>
+                <div className="outline">
+                <ul className="categories_subRoute">
+                  
+                  
+                  <div>
+                    <li className="business">
+                      <NavLink to="/business">
+                        Business
+                      </NavLink>
+                      <ul className="business_subroute">
+                        <div className="under_div_business">
+                        
+                          <li className="communication_science_container">
+                            <NavLink to="/communication" className="nav">Communication</NavLink>
+                       
+                          </li>
+                          <li className="management_development_container">
+                            <NavLink to="/management" className="nav">Management</NavLink>
+                            
+                       
+                          </li>
+                          
+                          <li className="Stetegy_container">
+                            <NavLink to="/businessstrategy" className="nav">Bussiness Strategy</NavLink>
+                         
+                          </li>
+                          <li className="Oprations_container">
+                          <NavLink to="/operation" className="nav">Operations</NavLink>
+                     
+                          </li>
+                         
+                          <li className="Law_container">
+                          <NavLink to="/hr" className="nav">Human Resources</NavLink>
+                          </li>
+
+                        </div>
+                      </ul>
+                    </li>
+                  </div>
+
+                  <div>
+                    <li className="finance">
+                      <NavLink to="/financeaccounting">
+                          Finance & Accounting
+                      </NavLink> 
+                      <ul className="subroute_finance">
+                        <div className="finance_under_div">
+                          <li className=" Accounting_finance_container">
+                            <NavLink to="/accountingbook" className="nav">Accounting & Book Keeping</NavLink>
+                         
+                          </li>
+                          
+                          <li className="Compliance_container">
+                            <NavLink to="/compliance" className="nav">Compilance</NavLink> 
+                          
+                          </li>
+                         
+                          <li className="Economics_container">
+                            <NavLink to="/economic" className="nav">Economic</NavLink>
+                          </li>
+                          <li className="Finance_container">
+                            <NavLink to="/finance" className="nav">Finance</NavLink>
+                           
+                          </li>
+                          <li className=" Cert_container">
+                            <NavLink to="/Taxes" className="nav">Taxes</NavLink>
+                        
+                          </li>
+                        </div>
+                      </ul>
+                    </li>
+                  </div>
+             
+                  <li className="it_software">
+                    <NavLink to="/itsoftware">
+                      IT & Software
+                      </NavLink>
+                    <ul className="subroute_It">
+                      <div className="It_under_div">
+                        <li className=" Certification_container">
+                          <NavLink to="/itcertification" className="nav">IT Certification</NavLink>
+                         
+                        </li>
+                        <li className="Network_container">
+                          <NavLink to="/networkSecurity" className="nav"> Network & Security</NavLink> 
+
+                        </li>
+                        <li className="Hardware_container">
+                          <NavLink to="/hardware" className="nav">Hardware</NavLink>
+                        
+                        </li>
+                        <li className="Operating_container">
+                          <NavLink to="/operatingSystem" className="nav">Operating System & Server</NavLink>
+                          
+                        </li>
+                        <li className="Otherit_container">
+                          <NavLink to="/otherITsoftware" className="nav">Other IT & Software</NavLink>
+                          
+                        </li>
+                      </div>
+                    </ul>
+                  </li>
+                  
+                 
+                  <li className="Design">
+                  <NavLink to="/design">
+                    Design
+                    </NavLink>
+                    <ul className="subroute_Design">
+                      <div className="Design_under_div">
+                        <li className=" Webdesign_container">
+                        <NavLink to="/webDesign" className="nav">Web Design</NavLink>
+                          
+                        </li>
+                        <li className="Illustration_container">
+                        <NavLink to="/fashionDesign" className="nav">Fashion Design</NavLink> 
+                        
+                        </li>
+                        <li className="tooldesign_container">
+                        <NavLink to="/animation" className="nav">3D & Animation</NavLink>
+                        </li>
+                        <li className=" User_container">
+                        <NavLink to="/gamedesign" className="nav">Game Design</NavLink>
+                       
+                        </li>
+                        <li className="gamedeign_container">
+                        <NavLink to="/otherDesign" className="nav">Other Design</NavLink>
+                      
+                        </li>
+                       
+                      </div>
+                    </ul>
+                  </li>
+                 
+                  <li className="Marketing">
+                    <NavLink to="/marketing">
+                      Marketing
+                    </NavLink>
+                    <ul className="subroute_Marketing">
+                      <div className="Marketing_under_div">
+                        <li className="Digital_container">
+                        <NavLink to="/digitalMarketing" className="nav">Digital Marketing</NavLink>
+                       
+                        </li>
+                        <li className="Illustration_container">
+                        <NavLink to="/contentMarketing" className="nav">Content Marketing</NavLink> 
+                        </li>
+                        <li className="tooldesign_container">
+                        <NavLink to="/socialMediaMarketing" className="nav">Social Media Marketing</NavLink>
+                         
+                        </li>
+                        <li className=" User_container">
+                        <NavLink to="/productMarketing" className="nav">Product Marketing</NavLink>
+                        </li>
+                        <li>
+                        <NavLink to="/publicRelationship" className="nav">Public Relationship</NavLink>
+                        </li>
+                      </div>
+                    </ul>
+                  </li>
+                 
+                  <li className="LifeStyle">
+                  <NavLink to="/lifestyle">
+                    LifeStyle
+                    </NavLink>
+                    <ul className="subroute_LifeStyle">
+                      <div className="LifeStyle_under_div">
+                        <li className="Arts_container">
+                        <NavLink to="/artCrafts" className="nav">Arts & Crafts</NavLink>
+                          
+                        </li>
+                        <li className="Makeup_container">
+                        <NavLink to="/beautyMakeup" className="nav">Beauty & Makeup</NavLink>
+                          
+                        </li>
+                        <li className="Esoteric_container">
+                        <NavLink to="/travel" className="nav">Travel</NavLink>
+                         
+                        </li>
+                        <li className="Bevrage_container">
+                        <NavLink to="/foodBeverage" className="nav"> Food & Beverage</NavLink>
+                        
+                        </li>
+                        <li>
+                        <NavLink to="/petCaretraining" className="nav">Pet care & Training</NavLink>
+                        </li>
+                      </div>
+                    </ul>
+                  </li>
+                  
+                  <li className="Video">
+                    <NavLink to="/photography">
+                      Photography & Video
+                    </NavLink> 
+                
+                    <ul className="subroute_Video">
+                      <div className="Video_under_div">
+                        <li className="Digital_container">
+                        <NavLink to="/digitalPhotography" className="nav">Digital Photography</NavLink>
+
+                        </li>
+                        <li className=" Photographysecond_container">
+                        <NavLink to="/photography" className="nav">Photography</NavLink> 
+                        </li>
+                        <li className="Portrait_container">
+                        <NavLink to="/commercialPhotography" className="nav">Commercial Photography</NavLink>
+                        </li>
+                        <li className="Toolsphoto_container">
+                        <NavLink to="/photographyTools" className="nav">Photography Tools</NavLink>
+                        </li>
+                        <li className="">
+                        <NavLink to="/videoDesign" className="nav">Video Design</NavLink>
+                        </li>
+                      </div>
+                    </ul>
+                  </li>
+                 
+                  <li className="Fitness">
+                  <NavLink to="/healthFitness">
+                        Health & Fitness
+                    </NavLink>
+                     
+                    <ul className="subroute_Fitness">
+                      <div className="Fitness_under_div">
+                        <li className="Fitness_container">
+                        <NavLink to="/fitness" className="nav">Fitness</NavLink>
+                          
+                        </li>
+                        <li className=" General_container">
+                        <NavLink to="/mentalhealth" className="nav">Mental Health</NavLink> 
+                         
+                        </li>
+                        <li className="Sports_container">
+                        <NavLink to="/sports" className="nav">Sports</NavLink>
+
+                          
+                        </li>
+                        <li className="">
+                        <NavLink to="/yoga" className="nav">Yoga</NavLink>
+
+                        </li>
+                        <li className="dance">
+                        <NavLink to="/dance" className="nav">Dance</NavLink>
+
+                        </li>
+                      </div>
+                    </ul>
+                  </li>
+                
+                  <li className="music">
+                  <NavLink to="/music">
+                        Music
+                    </NavLink> 
+                    <ul className="subroute_music">
+                      <div className="music_under_div">
+                        <li className="Instrument_container">
+                        <NavLink to="/instruments" className="nav">Instruments</NavLink>
+                        </li>
+                        <li className="Production_container">
+                        <NavLink to="/musicProduction" className="nav">Music Production</NavLink> 
+                        </li>
+                        <li className="Musicfunda_container">
+                        <NavLink to="/musicSoftware" className="nav">Music Software</NavLink>
+                        </li>
+                        <li className="Vocal_container">
+                        <NavLink to="/vocal" className="nav">Vocal</NavLink>
+                        </li>
+                        <li className="Musicfunda_container">
+                        <NavLink to="/musicTechniques" className="nav">Music Techniques</NavLink>
+                        </li>
+                       
+                      </div>
+                    </ul>
+                  </li>
+                  
+                  <li className="Teaching">
+                  <NavLink to="/Teaching">
+                Teaching & Academics
+                    </NavLink>
+                    
+                    <ul className="subroute_Teaching">
+                      <div className="Teaching_under_div">
+                        <li className="Engneering_container">
+                        <NavLink to="/engineering" className="nav">Engineering</NavLink>
+                        </li>
+                        <li className="Humanities_container">
+                        <NavLink to="/socialScience" className="nav">Social Science</NavLink> 
+                        </li>
+                        <li className="Math_container">
+                        <NavLink to="/math" className="nav">  Math </NavLink>
+                        </li>
+                        <li className="Science_container">
+                        <NavLink to="/science" className="nav">Science</NavLink>
+                        </li>
+                        <li>
+                        <NavLink to="/teacherTraining" className="nav">Teacher Training</NavLink>
+                        </li>
+                      </div>
+                    </ul>
+                  </li>
+                </ul>
+                </div>
+              </li>
+            </ul>
           </div>
-          
-      
-      <NavLink to="/financeaccounting" className="category2">Finance&Accounting  </NavLink>
-    
-      <div className="sub-category2 mycategory" >
-      <NavLink to="/accountingbook">Accounting & Bookkeeping</NavLink>
-      <NavLink to="/compliance">Compliance</NavLink>
-      <NavLink to="/economic">Economic</NavLink>
-      <NavLink to="/finance" >Finance</NavLink>
-      <NavLink to="/Taxes">Taxes</NavLink>
-          </div>
-            
-     
-      <NavLink to="/itsoftware" className="category3">IT &Software </NavLink>
-     
-      <div className="sub-category3 mycategory"  >
-      <NavLink to="/itcertification">IT Certification</NavLink>
-      <NavLink to="/networkSecurity">Network Security</NavLink>
-      <NavLink to="/hardware">Hardware</NavLink>
-      <NavLink to="/operatingSystem">Operating System</NavLink>
-      <NavLink to="/otherITsoftware">Other IT Software</NavLink>
-      </div>
-        
-     
-
-      <NavLink to="/design" className="category4">Design  
-      </NavLink>
-    
-      <div className="sub-category4 mycategory"  >
-      <NavLink to="/webDesign">Web Design</NavLink>
-      <NavLink to="/gamedesign">Game Design</NavLink>
-      <NavLink to="/animation">3D Animation</NavLink>
-      <NavLink to="/fashionDesign">Fashion Design</NavLink>
-      <NavLink to="/otherDesign">Other Design</NavLink>
-      </div>
-      
-
-      <NavLink to="/marketing" className="category5">Marketing </NavLink>
-   
-      <div className="sub-category5 mycategory"  >
-      <NavLink to="/digitalMarketing">Digital Marketing</NavLink>
-      <NavLink to="/socialMediaMarketing">Social Media Marketing</NavLink>
-      <NavLink to="/publicRelationship">Public Relationship</NavLink>
-      <NavLink to="/productMarketing">Product Marketing</NavLink>
-      <NavLink to="/contentMarketing">Content Marketing</NavLink>
-      </div>
-        
-     
-
-      <NavLink to="/lifestyle" className="category6">LifeStyle</NavLink>
-      
-      <div className="sub-category6 mycategory"  >
-      <NavLink to="/artCrafts">Art & Crafts</NavLink>
-      <NavLink to="/beautyMakeup">Beauty & Makeup</NavLink>
-      <NavLink to="/foodBeverage">Food & Beverage</NavLink>
-      <NavLink to="/petCaretraining">Pet Care & Training</NavLink>
-      <NavLink to="/travel">Travel</NavLink>
-      </div>
-        
-      
-
-      <NavLink to="/photography" className="category7">Photography &video</NavLink>
-     
-      <div className="sub-category7 mycategory"  >
-      <NavLink to="/digitalPhotography">Digital Photography</NavLink>
-      <NavLink to="/photography">Photography</NavLink>
-      <NavLink to="/videoDesign">Video Design</NavLink>
-      <NavLink to="/commercialPhotography">Commercial Photography</NavLink>
-      <NavLink to="/photographyTools">Photography Tools</NavLink>
-      </div>
-        
-      
-
-      <NavLink to="/music" className="category8">Music </NavLink>
-      
-      <div className="sub-category8 mycategory"  >
-      <NavLink to="/instruments">Instruments</NavLink>
-      <NavLink to="/musicProduction">Music Production</NavLink>
-      <NavLink to="/vocal">Vocal</NavLink>
-      <NavLink to="/musicSoftware">Music Software</NavLink>
-      <NavLink to="/musicTechniques">Music Techniques</NavLink>
-      </div>
-        
-     
-      <NavLink to="/healthFitness"className="category9">Health&fitness </NavLink> 
-      
-      <div className="sub-category9 mycategory"  >
-      <NavLink to="/fitness">Fitness</NavLink>
-      <NavLink to="/sports">Sports</NavLink>
-      <NavLink to="/mentalhealth">Mental Health</NavLink>
-      <NavLink to="/yoga">Yoga</NavLink>
-      <NavLink to="/dance">Dance</NavLink>
-      </div>
-        
-     
-
-      <NavLink to="/Teaching"className="category10">Teaching&Academics 
-      
-      <div className="sub-category10 mycategory"  >
-      <NavLink to="/engineering">Engineering</NavLink>
-      <NavLink to="/math">Math</NavLink>
-      <NavLink to="/socialScience">Social Science</NavLink>
-      <NavLink to="/science">Science</NavLink>
-      <NavLink to="/teacherTraining">Teacher Training</NavLink>
-      </div>
-      </NavLink> 
-     
-      </div>
-     </div>
         
     <nav>
     <IoIosSearch className="search" onClick={handleSearch}/>
@@ -253,7 +443,7 @@ useEffect(()=>{
       <div id="heading"> 
       <NavLink to="/techonudemy" style={{textDecoration:"none"}}>
       <p className="techon">  Tech on Udemy</p></NavLink>
-      <NavLink to="/addtocart">
+      <NavLink to="/addtocart" className="add">
       <MdOutlineShoppingCart id="add-to-cart"/>
       </NavLink>
      
@@ -262,13 +452,39 @@ useEffect(()=>{
        
     
 {(name)?
-<div>
-"mylearning" <button onClick={handlelogout}>Logout</button>
-</div>:
+  <div className="learnerparent">
+                     <div className="nameiconsdiv">
+                       <NavLink to="/mylearning" className="mylearn">
+                       <p onClick={()=>navi("/learnercart")}>My Learning</p>
+                        </NavLink> 
+                        <p className="nameicon">{name.slice(0,1)}</p>
+                     </div>
+                  
+                    <div className="dropdown">
+                        <div className="innerdrop">
+                         
+                          <div className="emailnamediv">
+                          
+                            <p className="Myname">
+                            {name}
+                            </p>
+                           
+                          
+                            <p>
+                            {email}
+                            </p>
+                          </div>
+                        </div>
+                        <p onClick={()=>navi("/mylearning")}>My Learning Cart </p>
+                        <p onClick={()=>navi("/addtocart")}>Add to Cart</p>
+                        <p onClick={()=>navi("/techonudemy")}>Tech on Udemy</p>
+                        <p onClick={handlelogout}>Log out</p>
+                    </div>
+                  </div>:
 
     <div id="login-signup">
-      <button className="loginbtn">Login</button>
-      <button className="signupbtn">Signup</button>
+      <NavLink to="/login"><button className="loginbtn">Login</button></NavLink>
+     <NavLink to="/register"><button className="signupbtn">Signup</button></NavLink> 
       </div>
 }
       <div className="language-icon">
@@ -361,7 +577,7 @@ useEffect(()=>{
     <Route path="/search" element={<SeachBar/>}/>
     <Route path="/register" element={<Signup/>}/>
     <Route path="/login" element={<Login/>}/>
-
+   <Route path="/mylearning" element={<Mylearning/>}/>
     <Route path="/footer" element={<Footer/>}/>
   </Routes>
   
