@@ -75,7 +75,7 @@ const Cart = () => {
                             
                             <img className='contentsimg'src={item.image} alt="not found"/>
                             <div className="content1">
-                            <h5 style={{width:"40%"}}>{item.heading.slice(0,20)}</h5>
+                            <h5 className="cartheading"style={{width:"40%"}}>{item.heading.slice(0,20)}</h5>
                             <button className="cartremove" onClick={()=>changehandle(item.id)}>Remove Cart</button>
                             </div>
                             <div>

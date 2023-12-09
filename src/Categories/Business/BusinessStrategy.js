@@ -214,6 +214,8 @@ else{
   await axios.post("http://localhost:4005/api/addtocart",item)
 }
   }
+
+  
 useEffect(()=>{
     axios.get("http://localhost:4005/api/searchData")
     .then((response)=>
