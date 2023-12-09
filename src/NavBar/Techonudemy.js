@@ -8,7 +8,7 @@ import Footer from "../Footer/Footer"
 const Techonudemy = () => {
     const[data,setData]=useState([])
     useEffect(()=>{
-        axios.get("http://localhost:4005/api/searchData")
+        axios.get("https://udemi-pbit.onrender.com/api/searchData")
         .then((response)=>
           setData(response.data)
         )
@@ -39,7 +39,7 @@ export default Techonudemy
 function Techudemy1(){
     const[data,setData]=useState([])
     useEffect(()=>{
-        axios.get("http://localhost:4005/api/searchData")
+        axios.get("https://udemi-pbit.onrender.com/api/searchData")
         .then((response)=>
           setData(response.data)
         )
@@ -108,7 +108,7 @@ function Techudemy2(){
 function Techudemy3(){
     const[data,setData]=useState([])
     useEffect(()=>{
-        axios.get("http://localhost:4005/api/searchData")
+        axios.get("https://udemi-pbit.onrender.com/api/searchData")
         .then((response)=>
           setData(response.data)
         )
@@ -152,7 +152,7 @@ return(
 function Techudemy4(){
     const[data,setData]=useState([])
     useEffect(()=>{
-        axios.get("http://localhost:4005/api/searchData")
+        axios.get("https://udemi-pbit.onrender.com/api/searchData")
         .then((response)=>
           setData(response.data)
         )

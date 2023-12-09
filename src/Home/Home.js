@@ -8,7 +8,7 @@ import Footer from "../Footer/Footer"
 const Home = () => {
     const[data,setData]=useState([])
     useEffect(()=>{
-        axios.get("http://localhost:4005/api/searchData")
+        axios.get("https://udemi-pbit.onrender.com/api/searchData")
         .then((response)=>
         setData(response.data)
 
@@ -48,7 +48,7 @@ export default Home
 function Middle(){
     const[data,setData]=useState([])
     useEffect(()=>{
-        axios.get("http://localhost:4005/api/searchData")
+        axios.get("https://udemi-pbit.onrender.com/api/searchData")
         .then((response)=>
           setData(response.data)
         )
@@ -171,7 +171,7 @@ function Middle2(){
 function Middle3(){
     const[data,setData]=useState([])
     useEffect(()=>{
-        axios.get("http://localhost:4005/api/searchData")
+        axios.get("https://udemi-pbit.onrender.com/api/searchData")
         .then((response)=>
           setData(response.data)
         )
@@ -210,7 +210,7 @@ return(
 function Middle5(){
     const[data,setData]=useState([])
     useEffect(()=>{
-        axios.get("http://localhost:4005/api/searchData")
+        axios.get("https://udemi-pbit.onrender.com/api/searchData")
         .then((response)=>
           setData(response.data)
         )

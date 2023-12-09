@@ -21,7 +21,7 @@ function Login(){
     const handleClick=(e)=>{
          e.preventDefault()
         console.log(data)
-        axios.post("http://localhost:4005/api/login",data).then((res)=>{
+        axios.post("https://udemi-pbit.onrender.com/api/login",data).then((res)=>{
             alert(res.data.mess);
             console.log(res.data)
             setData(res.data);

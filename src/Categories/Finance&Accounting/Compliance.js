@@ -8,7 +8,7 @@ const Compliance = () => {
   const[cartdata,setcartData]=useState([])
 
   useEffect(()=>{
-    axios.get("http://localhost:4005/api/cartfind")
+    axios.get("https://udemi-pbit.onrender.com/api/cartfind")
     .then((response)=>setcartData(response.data))
     .catch((error)=>console.log(error))
     },[cartdata])
@@ -20,7 +20,7 @@ const Compliance = () => {
       alert("Data already exists")
     }
     else{
-      await axios.post("http://localhost:4005/api/addtocart",item)
+      await axios.post("https://udemi-pbit.onrender.com/api/addtocart",item)
     }
       }
     
@@ -28,7 +28,7 @@ const Compliance = () => {
 
 
   useEffect(()=>{
-      axios.get("http://localhost:4005/api/searchData")
+      axios.get("https://udemi-pbit.onrender.com/api/searchData")
       .then((response)=>
         setData(response.data)
       )
@@ -121,7 +121,7 @@ export default Compliance
 function Business2(){
 const[data,setData]=useState([])
 useEffect(()=>{
-    axios.get("http://localhost:4005/api/searchData")
+    axios.get("https://udemi-pbit.onrender.com/api/searchData")
     .then((response)=>
       setData(response.data)
     )
@@ -196,7 +196,7 @@ const[data,setData]=useState([])
 const[cartdata,setcartData]=useState([])
 
 useEffect(()=>{
-  axios.get("http://localhost:4005/api/cartfind")
+  axios.get("https://udemi-pbit.onrender.com/api/cartfind")
   .then((response)=>setcartData(response.data))
   .catch((error)=>console.log(error))
   },[cartdata])
@@ -208,12 +208,12 @@ useEffect(()=>{
     alert("Data already exists")
   }
   else{
-    await axios.post("http://localhost:4005/api/addtocart",item)
+    await axios.post("https://udemi-pbit.onrender.com/api/addtocart",item)
   }
     }
   
 useEffect(()=>{
-    axios.get("http://localhost:4005/api/searchData")
+    axios.get("https://udemi-pbit.onrender.com/api/searchData")
     .then((response)=>
       setData(response.data)
     )

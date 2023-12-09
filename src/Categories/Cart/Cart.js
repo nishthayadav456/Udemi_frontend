@@ -20,7 +20,7 @@ const Cart = () => {
 
 
     useEffect(()=>{
-        axios.get("http://localhost:4005/api/cartfind")
+        axios.get("https://udemi-pbit.onrender.com/api/cartfind")
         .then((response)=>setCartData(response.data))
 
         .catch((error)=>console.log(error))
@@ -40,15 +40,15 @@ const Cart = () => {
         "Content-Type": "application/json",
       };
       const response = await fetch(
-        "http://localhost:4005/paymentapi",
+        "https://udemi-pbit.onrender.com/paymentapi",
         {
           method: "POST",
           headers: headers,
           body: JSON.stringify(body),
         }
       );
-      await axios.post("http://localhost:4005/api/postlearning",cartdata)
-      await axios.delete("http://localhost:4005/api/cartdelete")
+      await axios.post("https://udemi-pbit.onrender.com/api/postlearning",cartdata)
+      await axios.delete("https://udemi-pbit.onrender.com/api/cartdelete")
    
       const session = await response.json();
     const result = stripe.redirectToCheckout({
@@ -60,7 +60,7 @@ const Cart = () => {
     } 
     const changehandle=async(id)=>{
       console.log(id)
- await axios.post("http://localhost:4005/api/removecart",{id:id})
+ await axios.post("https://udemi-pbit.onrender.com/api/removecart",{id:id})
     }
       
        

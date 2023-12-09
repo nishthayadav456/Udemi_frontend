@@ -19,7 +19,7 @@ function Signup(){
   const handleClick=(e)=>{
     e.preventDefault()
     console.log(data)
-    axios.post("http://localhost:4005/api/register",data)
+    axios.post("https://udemi-pbit.onrender.com/api/register",data)
    
     .then((res)=>{
       alert(res.data.mess);

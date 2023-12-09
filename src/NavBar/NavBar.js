@@ -88,7 +88,7 @@ const NavBar = () => {
 
 const [search,setSearch]=useState()
 useEffect(()=>{
-  axios.get(`http://localhost:4005/api/searchbar?category=${Searchdata}`)
+  axios.get(`https://udemi-pbit.onrender.com/api/searchbar?category=${Searchdata}`)
   .then((response)=>setSearch(response.data))
   .catch((error)=>console.log(error))
 },[Searchdata])
