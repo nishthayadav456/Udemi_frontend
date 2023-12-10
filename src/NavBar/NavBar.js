@@ -596,7 +596,7 @@ const email=localStorage.getItem("email")
              
                 
               
-                <NavLink onClick={() => {setCount(!count) ;handlelogout()}} to="/register" className="navlinkRes" style={({isActive})=>({color: isActive ? "aqua":"Navy"})}>
+                <NavLink onClick={() => {setCount(!count) ;handlelogout()}} to="/register" className="navlinkRes" style={({isActive})=>({color: isActive ? "black":"black"})}>
                       Logout
                   </NavLink>:
                   <>

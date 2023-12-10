@@ -6,11 +6,11 @@ const Footer = () => {
             <div className='footer-top'>
             <p>Top companies choose Udemy Business to build in-demand career skills.</p>
             <div className='footer-logo'>
-            <img src="https://s.udemycdn.com/partner-logos/v4/nasdaq-light.svg" alt="not found"/>
-            <img src="https://s.udemycdn.com/partner-logos/v4/volkswagen-light.svg" alt="not found"/>
-            <img src="https://s.udemycdn.com/partner-logos/v4/box-light.svg" alt="not found"/>
-            <img src="https://s.udemycdn.com/partner-logos/v4/netapp-light.svg" alt="not found"/>
-            <img src="https://s.udemycdn.com/partner-logos/v4/eventbrite-light.svg" alt="not found"/>
+            <img className="footer-mid-img"src="https://s.udemycdn.com/partner-logos/v4/nasdaq-light.svg" alt="not found"/>
+            <img   className="footer-mid-img" src="https://s.udemycdn.com/partner-logos/v4/volkswagen-light.svg" alt="not found"/>
+            <img  className="footer-mid-img" src="https://s.udemycdn.com/partner-logos/v4/box-light.svg" alt="not found"/>
+            <img   className="footer-mid-img"src="https://s.udemycdn.com/partner-logos/v4/netapp-light.svg" alt="not found"/>
+            <img   className="footer-mid-img"src="https://s.udemycdn.com/partner-logos/v4/eventbrite-light.svg" alt="not found"/>
             </div>
             </div>
              <div className="footer-section">

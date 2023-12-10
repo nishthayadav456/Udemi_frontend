@@ -138,7 +138,7 @@ return(
          <p>We offer plenty of resources on how to create your first course. And, our instructor dashboard and curriculum pages help keep you organized.</p>
          </div>
         </div>
-    <img  src={item.image} alt="not found"/>
+    <img className="tech-mid-img" src={item.image} alt="not found"/>
    </div>
   </div>
   </div>

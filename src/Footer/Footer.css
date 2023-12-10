@@ -71,6 +71,52 @@ padding-left: 10px;
         gap:30px;
      
     }
+    .footer-top {
+        padding-left: 10px;
+        font-size: 12px;
+    }
+
+    .footer-section,
+    .footer-section1 {
+        padding-left: 10px;
+        font-size: 10px;
+     
+    }
+
+    .footer-section1 {
+        gap: 15px;
+    }
+
+    .footer-section ul {
+        line-height: 1.8;
+    }
+
+    #footer-udemylogo {
+        height: 20px;
+        width: 30px;
+        padding-left: 10px;
+    }
+
+  
+    footer {
+        background-color: #1c1d1f;
+        color: #ecf0f1;
+        padding: 10px;
+        text-align: center;
+        position: relative;
+        bottom: 0;
+        width: 94%;
+        
+    }
+    .footer-logo{
+        display: flex;
+        gap:30px;
+     
+    }
+    .footer-mid-img{
+        height:50%;
+        width: 50%;
+    }
 }
 
 

@@ -82,15 +82,15 @@
     }
     @media screen and (min-width: 300px) and (max-width: 667px) {
       form {
-        width: 90%;
+        width: 80%;
       }
     
       .input-bar {
-        width: 90%;
+        width: 80%;
       }
     
-      .btn1 {
-        width: 90%;
+      .btn11 {
+        width: 80%;
       }
     
       .log {
@@ -98,7 +98,7 @@
       }
     
       .logout {
-        width: 90%;
+        width: 80%;
         left: 5%;
       }
     }
