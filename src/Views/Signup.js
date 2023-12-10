@@ -2,6 +2,7 @@ import './Style.css'
 import { useState } from "react";
 import axios from "axios";
 import { NavLink, useNavigate } from "react-router-dom";
+
 function Signup(){
  const navi=useNavigate()   
 
@@ -52,13 +53,14 @@ function Signup(){
           <input className="input-bar" type="email" placeholder="Email" value={data.email} id="email" name="email" onChange={changeHandle}/><br/><br/>
           <label  htmlFor="password"></label>
           <input className="input-bar"type="password" placeholder="Password" value={data.password} id="password" name="password" onChange={changeHandle}/><br/><br/>
-          <button className="btn1"  onClick={handleClick}>SignUp</button><br/>
+          <button className="btn11"  onClick={handleClick}>SignUp</button><br/>
           <div className="or1" style={{color:"black"}}>Already have an account?
         <NavLink to="/login" style={{color:"black"}}>
           Go To Login Page
         </NavLink>
         </div>
       </form>
+    
       </div>
   )
  

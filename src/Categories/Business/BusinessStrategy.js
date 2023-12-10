@@ -7,25 +7,30 @@ const BusinessStrategy = () => {
   const[data,setData]=useState([])
   const[cartdata,setcartData]=useState([])
 
-useEffect(()=>{
-axios.get("https://udemi-pbit.onrender.com/api/cartfind")
-.then((response)=>setcartData(response.data))
-.catch((error)=>console.log(error))
-},[cartdata])
-
-const handleCart=async(item)=>{
-console.log(item.id)
-const handleData=cartdata.find((items)=>items.id===item.id)
-console.log(handleData)
-if(handleData){
-
-  alert("Data already exists")
-}
-else{
-  await axios.post("https://udemi-pbit.onrender.com/api/addtocart",item)
-}
-  }
-
+  const token=localStorage.getItem("token")
+  useEffect(()=>{
+  axios.get("https://udemi-pbit.onrender.com/api/cartfind")
+  .then((response)=>setcartData(response.data))
+  .catch((error)=>console.log(error))
+  },[cartdata])
+  
+  const handleCart=async(item)=>{
+  console.log(item.id)
+   if(token){
+    const handleData=cartdata.find((items)=>items.id===item.id)
+    console.log(handleData)
+    if(handleData){
+    
+      alert("Data already exists")
+    }
+    else{
+      await axios.post("https://udemi-pbit.onrender.com/api/addtocart",item)
+    }
+   }
+   else{
+    alert("logged in first")
+   }
+    }
 
   useEffect(()=>{
       axios.get("https://udemi-pbit.onrender.com/api/searchData")
@@ -196,6 +201,7 @@ function Business6(){
 const[data,setData]=useState([])
 const[cartdata,setcartData]=useState([])
 
+const token=localStorage.getItem("token")
 useEffect(()=>{
 axios.get("https://udemi-pbit.onrender.com/api/cartfind")
 .then((response)=>setcartData(response.data))
@@ -204,15 +210,20 @@ axios.get("https://udemi-pbit.onrender.com/api/cartfind")
 
 const handleCart=async(item)=>{
 console.log(item.id)
-const handleData=cartdata.find((items)=>items.id===item.id)
-console.log(handleData)
-if(handleData){
-
-  alert("Data already exists")
-}
-else{
-  await axios.post("https://udemi-pbit.onrender.com/api/addtocart",item)
-}
+ if(token){
+  const handleData=cartdata.find((items)=>items.id===item.id)
+  console.log(handleData)
+  if(handleData){
+  
+    alert("Data already exists")
+  }
+  else{
+    await axios.post("https://udemi-pbit.onrender.com/api/addtocart",item)
+  }
+ }
+ else{
+  alert("logged in first")
+ }
   }
 
   

@@ -4,6 +4,7 @@ import axios from "axios"
 import { NavLink, useNavigate } from "react-router-dom";
 
 
+
 function Login(){
   const navi=useNavigate()   
     const [data, setData] = useState(
@@ -59,15 +60,16 @@ function Login(){
             <input className="input-bar" type="email" placeholder="Email" value={data.email} id="email" name="email" onChange={changeHandle}/><br/><br/>
             <label  htmlFor="password"> </label>
             <input className="input-bar"  type="password" placeholder="Password" value={data.password}id="password" name="password" onChange={changeHandle} /><br/><br/>
-            <button className="btn1" onClick={handleClick}>login</button>
+            <button className="btn11" onClick={handleClick}>login</button>
             OR <hr/>
             <div className="box1">
             Don't have an account ?<NavLink to="/register"> Signup </NavLink> <NavLink to="/login"> Log In </NavLink> with Your Organization
             </div>
         </form>
-        
+     
         </div>
         
+       
         </div>
     )
     }

@@ -140,7 +140,7 @@ padding-top: 50px;
  }
  .broad-selection{
     padding-left: 80px;
-    border: 1px solid palevioletred; 
+   
  }
  .broad-heading{
     font-family: 'Times New Roman', Times, serif;
@@ -182,12 +182,12 @@ padding-top: 50px;
     flex-wrap: wrap;
     gap:40px;
     margin-top: 30px;
-    border: 2px solid rgb(0, 255, 208); 
+    
  }
 .Middle2{
     height: 250px;
     width:220px;
-    border: 2px solid green;
+    
 }
 .home-image{
     width:220px; 
@@ -213,13 +213,13 @@ font-weight: bolder;
     display: flex;
     flex-wrap: wrap;
     background-color: #f8f8fa;
-    border: 2px solid rgb(55, 0, 255);
+  
     gap:30px;
     padding-left: 80px;
  
 }
 .main-content{
-    border: 2px solid rgb(136, 77, 113);
+  
     height:130px;
     line-height: 1.5;
     font-size: 15px;
@@ -232,7 +232,7 @@ font-weight: bolder;
     margin-top: 50px;
 }
 .heading2{
-    border: 2px solid rgb(255, 0, 162); 
+  
     height: 300px;
     width:300px
 }
@@ -266,7 +266,7 @@ font-weight: bolder;
     display: flex;
     flex-wrap: wrap;
     gap:40px;
-    border: 2px solid rgb(0, 255, 208);
+    
     padding-left: 80px;   
 }
 
@@ -279,7 +279,7 @@ font-weight: bolder;
 .Middle4{
     height: 300px;
     width:220px;
-    border: 2px solid green;
+    
 }
 .ud-image{
     width:220px; 
@@ -377,7 +377,7 @@ font-weight: bolder;
     flex-wrap: wrap;
     gap:40px;
     margin-top: 50px;
-    border: 2px solid red;
+    
 }
 #logo{
     height:40px;
@@ -442,7 +442,7 @@ font-weight: bolder;
     flex-wrap: wrap;
     gap: 50px;
     background-color: white;
-    border: 1px solid grey;
+    
 }
 .parent-con{
     background-color: #f8f8fa;
@@ -463,13 +463,13 @@ font-weight: bolder;
 .leftbox{
     height: 300px;
     width: 400px; 
-    border: 2px solid rgb(255, 0, 72);
+
 }
 .rightbox{
    padding-left: 80px;
     height: 300px;
     width: 300px;
-    border: 2px solid rgb(183, 255, 0); 
+ 
 }
 .img1{
     border-radius: 100%;
@@ -484,7 +484,7 @@ font-weight: bolder;
     color: #3e4143;
 }
 .compo-parent{
-border: 2px solid red;
+
 display: flex;
 flex-wrap: wrap;
 gap:40px;
@@ -511,7 +511,7 @@ padding-left: 79px;
     width:220px; 
 }
 .sub-parent{
-    border: 2px solid rgb(0, 255, 153);
+   
      line-height: 25px;
      height: 305px;
     width:220px;
@@ -539,7 +539,7 @@ padding-left: 79px;
     font-weight: bolder;
     color: #1b1b1c;
     width:300px;
-    border: 2px solid green;
+   
     font-family:  'Udemy Sans','Segoe UI',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
 }
 .play-con{
@@ -601,7 +601,7 @@ padding-left: 79px;
     font-size: 16px;
 }
 .popular-instructor{
-border: 2px solid rgb(184, 69, 69);
+
 display: flex;
 flex-wrap: wrap;
 gap:60px;
@@ -717,12 +717,12 @@ font-weight: 500;
 display: flex;
 flex-wrap: wrap;
 justify-content: center;
-border: 2px solid red;
+
 margin-top: 40px;
 }
-.sub-parentcompo{
+/* .sub-parentcompo{
  border: 2px solid rgb(0, 255, 208);
-}
+} */
 .rating{
     width:300px;
     height: 200px;
@@ -834,7 +834,7 @@ margin-top: 6px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    border: 2px solid red;
+
     
 }
 .tech-firstimg1{
@@ -899,11 +899,11 @@ margin-top: 6px;
     flex-wrap: wrap;
     justify-content: center;
     gap:50px;
-    border: 1px solid red;
+  
     margin-top: 20px;
 }
 .tech-middlepara{
-    border: 1px solid rgb(0, 255, 26);
+  
     margin-top: 50px;
     width:350px;
     height:400px;
@@ -916,7 +916,7 @@ margin-top: 6px;
     flex-wrap: wrap;
     justify-content: center;
     gap:50px;
-    border: 1px solid red;
+    
     margin-top: 20px;
     background-color: #f9fbfc;
 }
@@ -924,7 +924,7 @@ margin-top: 6px;
     height:400px; 
 }
 .tech-middlepara1{
-    border: 1px solid rgb(0, 255, 26);
+    
     margin-top: 50px;
     width:350px;
     height:350px;
@@ -1620,7 +1620,7 @@ Navbar css */
     min-height: 50%;
     /* border: 2px solid red; */
   }
-  .categories_list {
+  .categories_list  {
     list-style: none;
     z-index: 5;
   }
@@ -2441,13 +2441,15 @@ Navbar css */
 .listres{
   display:block;
  
-  border-bottom:4px solid lightcyan;
+  border-bottom:2px solid rgb(165, 170, 170);
   text-align: center;
-  background-color: rgb(139, 157, 163)
+  
 }
 .listres .navlinkRes{
-  background-color: rgb(139, 157, 163);
+  background-color: rgb(192, 196, 197);
   color:white;
+  text-decoration: none;
+  color: black;
 }
 /* Style for the mobile menu icon */
 .display {
@@ -2459,7 +2461,9 @@ Navbar css */
 .navbar-listResponsive {
   display: none;
 }  
-
+.hambergerhide{
+  display: none;
+}
 
 
 /* Media querry  */
@@ -2471,6 +2475,7 @@ Navbar css */
    padding-bottom: 10px;
    display: flex;
    align-items: center;
+   gap:1rem;
 
  }
  #logo{
@@ -2479,7 +2484,7 @@ Navbar css */
 }
  .udemylogo{
   height: 30px;
-  width: 90px;
+  width: 50px;
 }
 .category{
    font-size: 13px;
@@ -2500,12 +2505,12 @@ Navbar css */
  }
 
  #search-input {
-  width:48rem;
-  padding: 12px;
-  padding-left: 40px;
+  width: 6rem;
+  padding: 8px;
   border-radius: 20px;
-background-color:  #ebebeb;
-display: none;
+  background-color: #ebebeb;
+  font-size: 10px;
+
    
  }
 
@@ -2562,6 +2567,7 @@ display: none;
    width:38px;
    border: 1px solid black;
    margin-left: 10px;
+   display: none;
 }
 .language-icon1{
    height:20px;
@@ -2569,7 +2575,19 @@ display: none;
    padding:8px ;
   
 } 
+.categories_div {
+  position: absolute;
+  left: -2vw;
+    top: 0rem;
+   cursor: pointer;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   height: 100%;
+   font-size: 15px;
 
+ }
  
 
 .iconsParent{
@@ -2586,27 +2604,37 @@ display: none;
 .links{
   display:none;
 }
+.hambergerhide{
+  display: none;
+}
 .navbar-listResponsive {
-  display: block;
-  position: absolute;
-  top: 10vh; /* Adjust as needed */
-  left: 0;
-  z-index: 1;
-  padding: 10px;
-  height: auto;
-  cursor:pointer;
-  display: block;
-  border: 1px solid rgb(10, 9, 9);
-  background-color: white;
-  width:70%;
-  height: 85vh;
-  line-height: 6vh;
+     display: block;
+    position: absolute;
+    top: 7vh;
+    left: -9px;
+    z-index: 1;
+    padding: 10px;
+    height: auto;
+    cursor: pointer;
+    display: block;
+    /* border: 1px solid rgb(10, 9, 9); */
+    background-color: white;
+    width: 50%;
+    height: 85vh;
+    line-height: 6vh
 }
 .business_res , .finance_res , .it_software_res , .Design_res ,
 .Marketing_res , .LifeStyle_res , .Video_res , .music_res , .Teaching_res , .mostpopular{
-  border-bottom: 2px solid lightgray;
+  text-align: start;
+  list-style-type: none;
 }
-
+.mostpopular{
+  font-weight: bolder;
+  color: gray;
+}
+.Teaching_res{
+  border-bottom: 2px solid gray;
+}
 .hambergerlinksShows {
   display: block;
   cursor: pointer;
@@ -2614,12 +2642,19 @@ display: none;
 }
 .hambergerlinksHide {
   display: block;
-  border: 5px solid blue;
+  
 }
+.learn_res{
+text-align: start;
+}
+.learn_res:hover{
+  color: blue;
+  }
 
-
-.listres{
+.listres, a{
   display: block;
+  color: black;
+  text-decoration: none;
 }
 
 .navlinkRes{
@@ -2637,11 +2672,11 @@ display: none;
 .display {
   cursor: pointer;
   height: 6vh;
-  border:2px solid red;
+  
   display: flex;
   justify-content: center;
   align-items: center;
-  width:9vw;
+  width:8vw;
   font-size: 34px;
   display: block;
 }
@@ -2653,6 +2688,7 @@ display: none;
 {
   /* border: 2px solid black; */
   list-style-type: none;
+
 }
 .business_subroute_res li  , .subroute_finance_res li ,.subroute_It_res li 
 , .subroute_Design_res li,
@@ -2660,19 +2696,22 @@ display: none;
 ,.subroute_music_res li , .subroute_Teaching_res li
 {
   border-bottom: 2px solid lightgray;
-  width:100%;
+  width:55vw;
+  
   list-style-type: none;
   background-color: white;
-  line-height: 14vh;
+  line-height: 15vh;
   /* border-bottom: 1px solid rgb(10, 9, 9); */
   font-size: 18px;
-  
+ 
 }
+
 .business_subroute_res , .subroute_finance_res, .subroute_It_res
 , .subroute_Design_res
 , .subroute_Marketing_res , .subroute_LifeStyle_res , .subroute_Video_res , .subroute_music_res , .subroute_Teaching_res 
 {
-  height: 90vh;
+  height: 100vh;
+  
 }
 .business_res:hover .bussiness_cover_res,
 .finance_res:hover .finance_cover_res,
@@ -2687,8 +2726,8 @@ display: none;
 
  {
   position: absolute;
-  left: 0vw;
-  width: 100%;
+  left: -8vw;
+  width: 65vw;
   top: 0vh;
   height: 80vh;
   display: block;
@@ -2697,6 +2736,7 @@ display: none;
   /* border: 2px solid black; */
   list-style: none;
   z-index: 2;
+  color: #5624d0;
 }
 .bussiness_cover_res ,.finance_cover_res ,
 
@@ -2704,7 +2744,7 @@ display: none;
 .LifeStyle_cover_res ,.Video_cover_res , .music_cover_res , .Teaching_cover_res
  {
   display:none;
-  height: 85vh;
+  
 }
 .it_cover_res , .Marketing_cover_res {
   display: none;
@@ -2778,9 +2818,9 @@ body {
   margin-top: 10px;
 }
 
-.sub-instructor {
+/* .sub-instructor {
   width: 100%;
-}
+} */
 
 /* All Business Courses */
 .All-courses {
@@ -2788,7 +2828,7 @@ body {
 }
 
 .mess-box {
-  width: 100%; 
+  width: 95%; 
 }
 
 .sort-filter {
@@ -2798,7 +2838,7 @@ body {
 }
 
 .sort-by {
-  width: 100%;
+  width: 95%;
 }
 
 /* Parent Component */
@@ -2812,7 +2852,7 @@ body {
 /* Sub-Parent Component */
 .sub-parentcompo,
 .rating {
-  width: 100%; 
+  width: 95%; 
 }
 
 /* Child Component */
@@ -2824,11 +2864,11 @@ body {
 }
 
 .course-image {
-  width: 100%; 
+  width: 95%; 
 }
 
 .right-business1 {
-  width: 100%; 
+  width: 95%; 
   text-align: center;
   padding: 10px;
 }
@@ -2849,7 +2889,7 @@ body {
 
 .firstimg {
     height: auto; /* Adjusted height to be responsive */
-    width: 100%;
+    width: 95%;
 }
 
 .top-heading {
