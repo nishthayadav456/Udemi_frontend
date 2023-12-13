@@ -6,13 +6,13 @@
   }
 
   header{
-     color: black;
+   color: black;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
     padding-top: 10px;
     padding-bottom: 10px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 
   }
   .udemylogo{
@@ -61,18 +61,18 @@
     display: flex;
     align-items: center;
     gap:10px;
-    padding-left: 15px;
+    padding-left: 0.6rem;
   }
 .loginbtn{
-  height: 3.5rem;
-  width: 4.375rem; 
+  height: 2.5rem;
+  width: 5.375rem; 
     background-color: whitesmoke;
     font-weight: bolder;
     cursor: pointer;
 }
 .signupbtn{
   height: 2.5rem;
-  width: 4.375rem; 
+  width: 5.375rem; 
     background-color: #333;
     color: white;
     font-weight: bolder;
@@ -84,9 +84,9 @@
     gap: 15px;
  }
  .techon{
-    font-size: 13px;
+    font-size: 0.9rem;
     color:#2d2f31;
-    padding-left: 10px;
+    padding-left: 0.6rem;
  }
  .techon:hover{
   color: #5624d0;
@@ -586,12 +586,16 @@ padding-left: 79px;
    margin-top: 10px;
    display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+  border: 1px solid rgb(0, 255, 229);
 }
-.tr{
+/* .tr{
    display: flex;
    flex-wrap: wrap;
-   gap: 80px;
-}
+  
+   justify-content: space-evenly;
+   border: 1px solid red;
+} */
 .td{
     border:1px solid  rgb(189, 185, 185);
     height:3rem ;
@@ -1601,14 +1605,14 @@ Navbar css */
   .categories_div:hover{
     color: #5624d0;
   }
-  .loginbtn , .signupbtn{
+  /* .loginbtn , .signupbtn{
     width:5vw;
     height:6vh;
   }
   .signupbtn{
     background-color: black;
     color:white;
-  }
+  } */
   
   .sub_container_two {
     text-align: left;

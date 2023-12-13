@@ -230,7 +230,7 @@ return(
     <div key={index}>
     <div className="Middle5">
     <img className="category-card" src={item.image} alt="not found"/>
-      <div className="card-heading" >{item.heading}</div>
+      <div className="card-heading">{item.heading}</div>
       </div>
  </div>
 </div>

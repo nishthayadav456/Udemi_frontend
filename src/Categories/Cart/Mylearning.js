@@ -1,11 +1,19 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Cart.css'
+import axios from 'axios';
 import { MdAccessAlarms } from "react-icons/md";
 import Footer from '../../Footer/Footer'
 import { NavLink } from 'react-router-dom'
 const Mylearning = () => {
+  const[learn,setLearn]=useState()
+  useEffect(()=>{
+axios.get("https://udemi-pbit.onrender.com/api/getlearning")
+.then((response)=>setLearn(response.learn))
+.catch((err)=>console.log(err))
+  },[])
   return (
-    <div>
+    <>
+    {/* <div className='learn-parent'>
       <div className='myleaning-parent'>
         <div className='mylearning-child'>
         <div className='mylearn-header'>My learning</div>
@@ -36,8 +44,24 @@ const Mylearning = () => {
         </div>
       
       </div>
-      <Footer/>
-    </div>
+      </div> */}
+      <div>
+        {
+          learn && learn.map((item,index)=>{
+       return(
+        <div key={index}>
+        {item.heading}
+       
+       </div>
+       )
+            
+          })
+        }
+ <h1>brhr</h1>
+      </div>
+      {/* <Footer/> */}
+  
+    </>
   )
 }
 
