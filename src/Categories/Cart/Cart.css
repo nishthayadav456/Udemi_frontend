@@ -301,3 +301,83 @@
   }
 
 }
+
+@media screen and (min-width:668px) and (max-width: 1180px) {
+  .myleaning-parent{
+    background-color: #1c1d1f;
+    display: flex;
+    padding-left: 350px;
+    color:white ;
+    height: 25vh;
+  }
+ 
+  .mylearn-header{
+    font-size: 35px;
+    color: white;
+    margin-top: 50px;
+    font-weight: bolder;
+    font-family: Georgia, 'Times New Roman', Times, serif
+
+  }
+  .mylearn-content{
+    margin-top: 50px;
+    font-size: 15px;
+    color: gray;
+    display: flex;
+    gap:12px;
+    font-weight: bolder;
+    font-family: 'Times New Roman', Times, serif;
+    flex-wrap: wrap;
+ }
+ .mylearn-content>span:hover{
+  color: white;
+ }
+  .mylearn-middle{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 30px;
+ 
+  }
+  .content-container{
+   width: 50rem;
+   padding: 10px;
+   border: 1px solid gray;
+   
+  }
+.getstart{
+  height:40px;
+  width:90px;
+  background-color: #333;
+  color: white;
+  font-weight: bolder;
+}
+.dismiss{
+  height:40px;
+  width:90px;
+  font-weight: bolder;
+  border: none;
+}
+.last-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 70px;
+  margin-top: 100px;
+}
+.last-container1{
+  width: 50rem;
+  text-align: center;
+}
+.start-heading{
+  font-weight: bolder;
+  color:#1c1d1f;
+  font-size: 20px;
+}
+.learning-heading{
+  font-size: 14px;
+  color: rgb(51, 51, 51);
+  
+}
+    
+}

@@ -60,7 +60,7 @@ const Cart = () => {
     } 
     const changehandle=async(id)=>{
       console.log(id)
- await axios.post("https://udemi-pbit.onrender.com/api/removecart",{id:id})
+     await axios.post("https://udemi-pbit.onrender.com/api/removecart",{id:id})
     }
       
        

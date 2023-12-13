@@ -388,7 +388,7 @@ return(
     <>
      <div className="container8">
         <div className="rightcon">
-<img src="https://s.udemycdn.com/home/non-student-cta/instructor-1x-v3.jpg" alt="not found"/>
+<img className="lst-img" src="https://s.udemycdn.com/home/non-student-cta/instructor-1x-v3.jpg" alt="not found"/>
         </div>
         <div className="leftcon">
 <h1 className="broad-heading">Become an instructor</h1>
