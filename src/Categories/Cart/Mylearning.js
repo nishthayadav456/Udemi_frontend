@@ -50,14 +50,21 @@ axios.get("https://udemi-pbit.onrender.com/api/getlearning")
           learn && learn.map((item,index)=>{
        return(
         <div key={index}>
-        {item.heading}
+        <div className="sub-parent">
        
-       </div>
+     <img className="compo-image" src={item.image} alt="not found"/>
+     <div className="compo-heading">{item.heading.slice(0,35)}..</div>
+     <div className="compo-writer">{item.writer}</div>
+     <div className="compo-rate">{item.rate}</div>
+     <div className="compo-price">₹{item.price}</div>
+  
+   </div>
+</div>
        )
             
           })
         }
- <h1>brhr</h1>
+ 
       </div>
       {/* <Footer/> */}
   
