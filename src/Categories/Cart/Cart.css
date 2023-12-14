@@ -78,7 +78,7 @@
 
   }
   .mylearn-content{
-    margin-top: 50px;
+    margin-top: 30px;
     font-size: 20px;
     color: gray;
     display: flex;
@@ -137,9 +137,39 @@
   color: rgb(51, 51, 51);
   
 }
+.learner-parent{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  gap: 10px;
+}
+.learner-image{
+  width:300px;
+}
+.learner-heading{
+  font-size: 17px;
+  font-weight: bolder;
+  color: #1b1b1c;
+  font-family:  'Udemy Sans','Segoe UI',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
+}
+.learner-writer{
+  font-size: 12px;
+  color: rgb(129, 126, 126); 
+}
+.learner-rate{
+  font-weight: bolder;
+}
+.learner-price{
+  font-weight: bolder;
+}
+
+
 
 /* cart Mobile responsive */
-@media screen and (min-width:300px) and (max-width: 667px){
+@media screen and (min-width:280px) and (max-width: 580px){
   .contents {
     display: flex;
     flex-direction: column;
@@ -239,11 +269,11 @@
   }
 
   .mylearn-content {
-    margin-top: 10px;
-    font-size: 16px;
+    margin-top: 21px;
+    font-size: 11px;
     color: gray;
     display: flex;
-    gap: 15px;
+    
     font-weight: bolder;
     font-family: 'Times New Roman', Times, serif;
     flex-wrap: wrap;
@@ -306,7 +336,7 @@
   .myleaning-parent{
     background-color: #1c1d1f;
     display: flex;
-    padding-left: 350px;
+    padding-left: 24px;
     color:white ;
     height: 25vh;
   }
@@ -320,7 +350,7 @@
 
   }
   .mylearn-content{
-    margin-top: 50px;
+    margin-top: 21px;
     font-size: 15px;
     color: gray;
     display: flex;

@@ -80,7 +80,7 @@
     .box1{
       display: flex;
     }
-    @media screen and (min-width: 300px) and (max-width: 667px) {
+    @media screen and (min-width: 280px) and (max-width: 580px) {
       form {
         width: 80%;
       }

@@ -462,7 +462,7 @@ const email=localStorage.getItem("email")
   <div className="learnerparent">
                      <div className="nameiconsdiv">
                        <NavLink to="/mylearning" className="mylearn">
-                       <p>My Learning</p>
+                       <p className="headingmylearning">My Learning</p>
                         </NavLink> 
                         <p className="nameicon">{name.slice(0,1)}</p>
                      </div>

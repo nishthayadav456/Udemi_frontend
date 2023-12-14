@@ -287,7 +287,7 @@ return(
   // console.log(item)
 return(
    
- 
+ <div className="top">
   <div className="child-compo" key={index}>
          
       
@@ -308,6 +308,8 @@ return(
 <div className="course-price">₹{item.price}</div>
 </div>
 </div>
+</div>
+
 
 )
      })}
