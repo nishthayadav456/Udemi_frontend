@@ -91,22 +91,22 @@ return(
   <h2 className="popular-top">Popular topics</h2>
   <div>
     <div className="table1">
-      <div className="tr">
+    
         <div className="td">Guitar</div>
         <div className="td">Music Production</div>
         <div className="td">Singing</div>
         <div className="td">Piano</div>
        
-      </div>
+     
       </div>
       <div className="table1">
-      <div className="tr">
+      
         <div className="td">Music Theory</div>
         <div className="td">Music Composition</div>
         <div className="td">FL Studio</div>
         <div className="td">Logic Pro</div>
       
-      </div>
+      
       </div>
     
   </div>

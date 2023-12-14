@@ -93,22 +93,22 @@ return(
       <h2 className="popular-top">Popular topics</h2>
     <div>
       <div className="table1">
-        <div className="tr">
+       
           <div className="td"> Ethical hacking</div>
           <div className="td">AWS Certified Cloud</div>
           <div className="td">CyberSecurity</div>
           <div className="td">Linux</div>
          
-        </div>
+       
         </div>
         <div className="table1">
-        <div className="tr">
+        
           <div className="td">ChatGPT</div>
           <div className="td">ComTIA Security+</div>
           <div className="td">Information Technology</div>
           <div className="td">Information Security</div>
         
-        </div>
+      
         </div>
       
     </div>

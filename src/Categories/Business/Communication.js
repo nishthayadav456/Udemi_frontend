@@ -95,22 +95,22 @@ return(
       <h2 className="popular-top">Popular topics</h2>
       <div>
       <div className="table1">
-        <div className="tr">
+        {/* <div className="tr"> */}
           <div className="td">Communication Skills </div>
           <div className="td">Public Speaking</div>
           <div className="td">Fiction Writing</div>
           <div className="td">Business Communication</div>
          
-        </div>
+        {/* </div> */}
         </div>
         <div className="table1">
-        <div className="tr">
+        {/* <div className="tr"> */}
           <div className="td">Presentation Skills</div>
           <div className="td">Writing</div>
           <div className="td">Business Writing</div>
           <div className="td">Storytelling</div>
         
-        </div>
+        {/* </div> */}
         </div>
       
     </div>

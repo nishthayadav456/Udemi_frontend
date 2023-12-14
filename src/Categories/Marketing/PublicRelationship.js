@@ -92,22 +92,22 @@ return(
     <h2 className="popular-top">Popular topics</h2>
     <div>
       <div className="table1">
-        <div className="tr">
+       
           <div className="td">Digital Marketing</div>
           <div className="td">Social Media Marketing</div>
           <div className="td">Facebook Ads</div>
           <div className="td">Instagram Marketing</div>
          
-        </div>
+        
         </div>
         <div className="table1">
-        <div className="tr">
+       
           <div className="td">Google Ads</div>
           <div className="td">Copywriting</div>
           <div className="td">Facebook Marketing</div>
           <div className="td">ChatGPT</div>
         
-        </div>
+        
         </div>
       
     </div>

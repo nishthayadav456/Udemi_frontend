@@ -92,22 +92,21 @@ return(
     <h2 className="popular-top">Popular topics</h2>
     <div>
       <div className="table1">
-        <div className="tr">
+       
           <div className="td"> Photography</div>
           <div className="td">Adobe Premiere</div>
           <div className="td">video Editing</div>
           <div className="td">Video Production</div>
          
-        </div>
+       
         </div>
         <div className="table1">
-        <div className="tr">
+      
           <div className="td">Filmmaking</div>
           <div className="td">AdobeAfterEffects</div>
           <div className="td">Adobe LightRoom</div>
           <div className="td">Color Grading</div>
         
-        </div>
         </div>
       
     </div>

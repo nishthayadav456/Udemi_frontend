@@ -92,22 +92,22 @@ return(
     <h2 className="popular-top">Popular topics</h2>
     <div>
       <div className="table1">
-        <div className="tr">
+     
           <div className="td">Human Resources</div>
           <div className="td">HR Analytics</div>
           <div className="td">Emotional Intelligence</div>
           <div className="td">Instructional Design</div>
          
-        </div>
+      
         </div>
         <div className="table1">
-        <div className="tr">
+        
           <div className="td">Recruiting</div>
           <div className="td">Employment Law</div>
           <div className="td">Hiring</div>
           <div className="td">Conflict Management</div>
         
-        </div>
+       
         </div>
       
     </div>

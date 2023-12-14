@@ -91,22 +91,22 @@ return(
   <h2 className="popular-top">Popular topics</h2>
   <div>
     <div className="table1">
-      <div className="tr">
+    
         <div className="td">Yoga</div>
         <div className="td">Nutrition</div>
         <div className="td">Fitness</div>
         <div className="td">Massage</div>
        
-      </div>
+      
       </div>
       <div className="table1">
-      <div className="tr">
+    
         <div className="td">Meditation</div>
         <div className="td">Facial Massage</div>
         <div className="td">Meditation</div>
         <div className="td">Herbalism</div>
       
-      </div>
+      
       </div>
     
   </div>

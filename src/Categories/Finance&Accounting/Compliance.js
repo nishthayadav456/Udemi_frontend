@@ -97,22 +97,22 @@ return(
     <h2 className="popular-top">Popular topics</h2>
     <div>
       <div className="table1">
-        <div className="tr">
+       
           <div className="td">Stock Trading</div>
           <div className="td">Financial Analysis</div>
           <div className="td">Accounting</div>
           <div className="td">Investing</div>
          
-        </div>
+        
         </div>
         <div className="table1">
-        <div className="tr">
+    
           <div className="td">Forex Trading</div>
           <div className="td">Technical Analysis</div>
           <div className="td">Financial Markets</div>
           <div className="td">Financial Modeling</div>
         
-        </div>
+        
         </div>
       
     </div>

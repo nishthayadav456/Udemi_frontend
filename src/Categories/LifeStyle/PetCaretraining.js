@@ -92,22 +92,22 @@ return(
     <h2 className="popular-top">Popular topics</h2>
     <div>
       <div className="table1">
-        <div className="tr">
+        
           <div className="td"> Reiki</div>
           <div className="td">Chess</div>
           <div className="td">Energy Healing</div>
           <div className="td">Astrology</div>
          
-        </div>
+        
         </div>
         <div className="table1">
-        <div className="tr">
+        
           <div className="td">Painting</div>
           <div className="td">Spiritual Healing</div>
           <div className="td">tarot Reading</div>
           <div className="td">Drawing</div>
         
-        </div>
+        
         </div>
       
     </div>

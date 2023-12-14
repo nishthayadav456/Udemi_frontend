@@ -6,6 +6,7 @@ import axios from 'axios';
 // import { NavLink } from 'react-router-dom'
 const Mylearning = () => {
   const[learn,setLearn]=useState()
+  console.log(learn)
   useEffect(()=>{
 axios.get("https://udemi-pbit.onrender.com/api/getlearning")
 .then((response)=>setLearn(response.learn))
@@ -47,7 +48,7 @@ axios.get("https://udemi-pbit.onrender.com/api/getlearning")
       </div> */}
       <div>
         {
-          learn && learn.map((item,index)=>{
+           learn.map((item,index)=>{
        return(
         <div key={index}>
         <div className="sub-parent">

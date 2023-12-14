@@ -2904,6 +2904,23 @@ body {
 .course-price {
   text-align: start;
 }
+.leftbox{
+  width: 348px;
+}
+.container9{
+  gap:0px
+}
+.rightbox{
+  width: 317px;
+}
+#left-con{
+  display: flex ;
+  justify-content: center;
+ 
+}
+
+ 
+
 }
 
 /* Home media querry */
@@ -2913,11 +2930,12 @@ body {
   .image-container {
     display: flex;
     justify-content: center;
+    width: 23rem;
 }
 
 .firstimg {
     height: auto; /* Adjusted height to be responsive */
-    width: 95%;
+    width: 94%;
 }
 
 .top-heading {
@@ -2933,8 +2951,12 @@ body {
     margin-top: 20px; /* Adjusted margin for smaller screens */
     flex-direction: column;
     background-color: #f8f8fa;
+    border: 1px solid red;
+    width: 22.5rem;
 }
-
+.Middle1{
+border: 3px solid rgb(0, 255, 110);
+}
 .middle-text {
     display: flex;
     flex-wrap: wrap;
@@ -2942,13 +2964,16 @@ body {
 }
 
 .logos {
-    padding-top: 30px; /* Adjusted padding for smaller screens */
+    padding-top: 30px; 
+    border: 1px solid blue;
+    width:4rem
 }
 
 .broad-selection {
     padding: 15px; /* Adjusted padding for smaller screens */
 
-    width: 91%;
+    width: 86%;
+    border: 1px solid green;
 }
 
 .broad-heading {
@@ -2984,7 +3009,8 @@ body {
   font-size: 15px;
 }
 .left-container{
-  width:88%;
+  width: 88%;
+  height: 22rem;
 }
 .middle-content{
   width:95%;
@@ -3016,7 +3042,10 @@ body {
     width: 95%; /* Adjusted width to be responsive */
   
 }
-
+.container3{
+  border: 1px solid red;
+  width: 22rem;
+}
 .home-image {
     width: 95%; /* Adjusted width to be responsive */
     border: 1px solid grey;
@@ -3064,6 +3093,7 @@ body {
 .broad-heading2 {
     padding-left: 15px; 
     margin-top: 30px; 
+    width: 22rem;
 }
 
 .heading2 {
@@ -3160,7 +3190,7 @@ body {
 .container6 {
     display: flex;
     flex-wrap: wrap;
-    padding-left: 15px
+    /* padding-left: 15px */
 
   
 }

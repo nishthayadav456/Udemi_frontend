@@ -91,22 +91,21 @@ return(
   <h2 className="popular-top">Popular topics</h2>
   <div>
     <div className="table1">
-      <div className="tr">
+      
         <div className="td">English Language</div>
         <div className="td">Math</div>
         <div className="td">Spanish Language</div>
         <div className="td">IELTS</div>
        
-      </div>
+     
       </div>
       <div className="table1">
-      <div className="tr">
+
         <div className="td">German Language</div>
         <div className="td">English grammar</div>
         <div className="td">French Language</div>
         <div className="td">Japanese Language</div>
       
-      </div>
       </div>
     
   </div>

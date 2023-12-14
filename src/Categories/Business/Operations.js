@@ -93,22 +93,22 @@ return(
       <h2 className="popular-top">Popular topics</h2>
       <div>
       <div className="table1">
-        <div className="tr">
+      
           <div className="td"> Supply Chain</div>
           <div className="td">Logistics Management</div>
           <div className="td">Lean</div>
           <div className="td">Quality Management</div>
          
-        </div>
+       
         </div>
         <div className="table1">
-        <div className="tr">
+      
           <div className="td">Operation Management</div>
           <div className="td">Virtual Assistant Skills</div>
           <div className="td">Warehouse Management</div>
           <div className="td">Six Sigma</div>
         
-        </div>
+        
         </div>
       
     </div>

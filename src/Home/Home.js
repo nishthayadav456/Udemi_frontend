@@ -350,8 +350,11 @@ function Middle7(){
     <button className="btn3">Get udemy Business</button>
     <button className="btn4">Learn more</button>
           </div>
-          <div >
+          <div id="left-con">
+            <div className="left-con-subparent">
             <img className="left-container"src="https://s.udemycdn.com/home/non-student-cta/UB_Promo_800x800.jpg" alt="not found"/>
+            </div>
+          
           </div>
         </div>
         <Middle8/>

@@ -94,22 +94,22 @@ return(
       <h2 className="popular-top">Popular topics</h2>
     <div>
       <div className="table1">
-        {/* <div className="tr"> */}
+       
           <div className="td"> PMI Project Management professional (PMP)</div>
           <div className="td">Project Management</div>
           <div className="td">Data Modeling</div>
           <div className="td">Business Analysis</div>
          
-        {/* </div> */}
+       
         </div>
         <div className="table1">
-        {/* <div className="tr"> */}
+        
           <div className="td">PMI PMBOK</div>
           <div className="td">Data Analysis</div>
           <div className="td">PMI Certified Associate in Project Management</div>
           <div className="td">Tableau</div>
         
-        {/* </div> */}
+       
         </div>
       
     </div>

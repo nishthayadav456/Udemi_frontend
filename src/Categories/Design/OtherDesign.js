@@ -94,22 +94,22 @@ return(
     <h2 className="popular-top">Popular topics</h2>
     <div>
       <div className="table1">
-        <div className="tr">
+       
           <div className="td"> Blender</div>
           <div className="td">Figma</div>
           <div className="td">Adobe Photoshop</div>
           <div className="td">3D Modeling</div>
          
-        </div>
+       
         </div>
         <div className="table1">
-        <div className="tr">
+       
           <div className="td">user Experience Design</div>
           <div className="td">Canva</div>
           <div className="td">Drawing</div>
           <div className="td">AutoCAD</div>
         
-        </div>
+        
         </div>
       
     </div>
