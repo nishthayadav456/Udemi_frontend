@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import './Cart.css'
 import axios from 'axios';
-import { MdAccessAlarms } from "react-icons/md";
-import Footer from '../../Footer/Footer'
-import { NavLink } from 'react-router-dom'
+// import { MdAccessAlarms } from "react-icons/md";
+// import Footer from '../../Footer/Footer'
+// import { NavLink } from 'react-router-dom'
 const Mylearning = () => {
   const[learn,setLearn]=useState()
   useEffect(()=>{
