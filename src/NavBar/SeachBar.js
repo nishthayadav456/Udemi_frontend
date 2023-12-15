@@ -1,4 +1,6 @@
-import React from 'react'
+import axios from "axios"
+import { useEffect } from "react"
+import { useState } from "react"
 import { useLocation } from 'react-router-dom'
 import Footer from '../Footer/Footer'
 
@@ -6,6 +8,26 @@ const SeachBar = () => {
     const location=useLocation()
     const data=location.state
     console.log(data)
+    const[cartdata,setcartData]=useState([])
+
+    useEffect(()=>{
+      axios.get("https://udemi-pbit.onrender.com/api/cartfind")
+      .then((response)=>setcartData(response.data))
+      .catch((error)=>console.log(error))
+      },[cartdata])
+      
+      const handleCart=async(item)=>{
+      console.log(item.id)
+      const handleData=cartdata.find((items)=>items.id===item.id)
+      if(handleData){
+        alert("Data already exists")
+      }
+      else{
+        await axios.post("https://udemi-pbit.onrender.com/addtocart",item)
+      }
+        }
+      
+
   return (
     <div>
     <div className="All-courses">
@@ -101,11 +123,15 @@ return(
 
 <div className="course-writer">{item.writer}</div>
 <div className="course-rate">{item.rate}</div>
-<div><button className="bestseller">BestSeller</button></div>
+<div className="addbtn">
+    <button className="bestseller">BestSeller</button>
+    <button  className="bestseller1" onClick={()=>handleCart(item)}>Add to cart</button>
+    </div>
 </div>
 <div>
 <div className="course-price">₹{item.price}</div>
 </div>
+
 </div>
 
 )

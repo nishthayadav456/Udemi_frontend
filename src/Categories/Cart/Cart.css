@@ -1,3 +1,10 @@
+.cartparent{
+  min-height: 23vh;
+}
+  
+
+  
+
 .contents {
     display: flex;
     justify-content: space-between;
@@ -333,6 +340,9 @@
 }
 
 @media screen and (min-width:668px) and (max-width: 1180px) {
+  .cartparent{
+    min-height: 45vh;
+  }
   .myleaning-parent{
     background-color: #1c1d1f;
     display: flex;

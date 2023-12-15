@@ -67,7 +67,7 @@ const Cart = () => {
   return (
     <div>
   
-            <div>
+            <div className='cartparent'>
               <h1>Shopping cart</h1><hr/>
             {cartdata&& cartdata.map((item,index)=>{
                     return(

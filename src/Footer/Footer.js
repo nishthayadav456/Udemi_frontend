@@ -1,7 +1,7 @@
 import './Footer.css'
 const Footer = () => {
   return (
-    <div>
+    <div className='footerparent'>
        <footer>
             <div className='footer-top'>
             <p>Top companies choose Udemy Business to build in-demand career skills.</p>

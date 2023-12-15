@@ -60,7 +60,7 @@ return(
     <div className="compo-writer">{item.writer}</div>
     <div className="compo-rate">{item.rate}</div>
     <div className="compo-price">₹{item.price}</div>
-    <button   className="bestseller1" onClick={()=>handleCart(item)}>Add to cart</button>
+    <button className="bestseller1" onClick={()=>handleCart(item)}>Add to cart</button>
 
   </div>
 </div>
